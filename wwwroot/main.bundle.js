@@ -4,28 +4,28 @@ webpackJsonp(["main"],{
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./chartjs/chartjs.module": [
-		"../../../../../src/app/chartjs/chartjs.module.ts",
+	"./views/chartjs/chartjs.module": [
+		"../../../../../src/app/views/chartjs/chartjs.module.ts",
 		"chartjs.module"
 	],
-	"./components/components.module": [
-		"../../../../../src/app/components/components.module.ts",
+	"./views/components/components.module": [
+		"../../../../../src/app/views/components/components.module.ts",
 		"components.module"
 	],
-	"./dashboard/dashboard.module": [
-		"../../../../../src/app/dashboard/dashboard.module.ts",
+	"./views/dashboard/dashboard.module": [
+		"../../../../../src/app/views/dashboard/dashboard.module.ts",
 		"dashboard.module"
 	],
-	"./icons/icons.module": [
-		"../../../../../src/app/icons/icons.module.ts",
+	"./views/icons/icons.module": [
+		"../../../../../src/app/views/icons/icons.module.ts",
 		"icons.module"
 	],
-	"./pages/pages.module": [
-		"../../../../../src/app/pages/pages.module.ts",
+	"./views/pages/pages.module": [
+		"../../../../../src/app/views/pages/pages.module.ts",
 		"pages.module"
 	],
-	"./widgets/widgets.module": [
-		"../../../../../src/app/widgets/widgets.module.ts",
+	"./views/widgets/widgets.module": [
+		"../../../../../src/app/views/widgets/widgets.module.ts",
 		"widgets.module"
 	]
 };
@@ -84,17 +84,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_dropdown__ = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_bootstrap_tabs__ = __webpack_require__("../../../../ngx-bootstrap/tabs/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_nav_dropdown_directive__ = __webpack_require__("../../../../../src/app/shared/nav-dropdown.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_charts_ng2_charts__ = __webpack_require__("../../../../ng2-charts/ng2-charts.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_charts_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_charts_ng2_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_sidebar_directive__ = __webpack_require__("../../../../../src/app/shared/sidebar.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_aside_directive__ = __webpack_require__("../../../../../src/app/shared/aside.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_breadcrumb_component__ = __webpack_require__("../../../../../src/app/shared/breadcrumb.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__layouts_full_layout_component__ = __webpack_require__("../../../../../src/app/layouts/full-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__layouts_simple_layout_component__ = __webpack_require__("../../../../../src/app/layouts/simple-layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__containers__ = __webpack_require__("../../../../../src/app/containers/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components__ = __webpack_require__("../../../../../src/app/components/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__directives__ = __webpack_require__("../../../../../src/app/directives/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_dropdown__ = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_tabs__ = __webpack_require__("../../../../ngx-bootstrap/tabs/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_charts_ng2_charts__ = __webpack_require__("../../../../ng2-charts/ng2-charts.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_charts_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_ng2_charts_ng2_charts__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -105,16 +102,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// Import containers
 
+var APP_CONTAINERS = [
+    __WEBPACK_IMPORTED_MODULE_4__containers__["a" /* FullLayout */],
+    __WEBPACK_IMPORTED_MODULE_4__containers__["b" /* SimpleLayout */]
+];
+// Import components
 
+var APP_COMPONENTS = [
+    __WEBPACK_IMPORTED_MODULE_5__components__["a" /* AppAside */],
+    __WEBPACK_IMPORTED_MODULE_5__components__["b" /* AppBreadcrumbs */],
+    __WEBPACK_IMPORTED_MODULE_5__components__["c" /* AppFooter */],
+    __WEBPACK_IMPORTED_MODULE_5__components__["d" /* AppHeader */],
+    __WEBPACK_IMPORTED_MODULE_5__components__["e" /* AppSidebar */],
+    __WEBPACK_IMPORTED_MODULE_5__components__["f" /* AppSidebarFooter */],
+    __WEBPACK_IMPORTED_MODULE_5__components__["g" /* AppSidebarForm */],
+    __WEBPACK_IMPORTED_MODULE_5__components__["h" /* AppSidebarHeader */],
+    __WEBPACK_IMPORTED_MODULE_5__components__["i" /* AppSidebarMinimizer */]
+];
+// Import directives
 
+var APP_DIRECTIVES = [
+    __WEBPACK_IMPORTED_MODULE_6__directives__["a" /* AsideToggleDirective */],
+    __WEBPACK_IMPORTED_MODULE_6__directives__["b" /* NAV_DROPDOWN_DIRECTIVES */],
+    __WEBPACK_IMPORTED_MODULE_6__directives__["c" /* SIDEBAR_TOGGLE_DIRECTIVES */]
+];
+// Import routing module
 
+// Import 3rd party components
 
-
-
-// Routing Module
-
-// Layouts
 
 
 var AppModule = (function () {
@@ -126,20 +143,14 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_11__app_routing__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_5_ngx_bootstrap_tabs__["a" /* TabsModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_7_ng2_charts_ng2_charts__["ChartsModule"]
+            __WEBPACK_IMPORTED_MODULE_7__app_routing__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_tabs__["a" /* TabsModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_10_ng2_charts_ng2_charts__["ChartsModule"]
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__layouts_full_layout_component__["a" /* FullLayoutComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__layouts_simple_layout_component__["a" /* SimpleLayoutComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__shared_nav_dropdown_directive__["a" /* NAV_DROPDOWN_DIRECTIVES */],
-            __WEBPACK_IMPORTED_MODULE_10__shared_breadcrumb_component__["a" /* BreadcrumbsComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__shared_sidebar_directive__["a" /* SIDEBAR_TOGGLE_DIRECTIVES */],
-            __WEBPACK_IMPORTED_MODULE_9__shared_aside_directive__["a" /* AsideToggleDirective */],
-        ],
+            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
+        ].concat(APP_CONTAINERS, APP_COMPONENTS, APP_DIRECTIVES),
         providers: [{
                 provide: __WEBPACK_IMPORTED_MODULE_2__angular_common__["g" /* LocationStrategy */],
                 useClass: __WEBPACK_IMPORTED_MODULE_2__angular_common__["d" /* HashLocationStrategy */]
@@ -160,8 +171,7 @@ AppModule = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layouts_full_layout_component__ = __webpack_require__("../../../../../src/app/layouts/full-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layouts_simple_layout_component__ = __webpack_require__("../../../../../src/app/layouts/simple-layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers__ = __webpack_require__("../../../../../src/app/containers/index.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -170,8 +180,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 
-// Layouts
-
+// Import Containers
 
 var routes = [
     {
@@ -181,43 +190,43 @@ var routes = [
     },
     {
         path: '',
-        component: __WEBPACK_IMPORTED_MODULE_2__layouts_full_layout_component__["a" /* FullLayoutComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_2__containers__["a" /* FullLayout */],
         data: {
             title: 'Home'
         },
         children: [
             {
                 path: 'dashboard',
-                loadChildren: './dashboard/dashboard.module#DashboardModule'
+                loadChildren: './views/dashboard/dashboard.module#DashboardModule'
             },
             {
                 path: 'components',
-                loadChildren: './components/components.module#ComponentsModule'
+                loadChildren: './views/components/components.module#ComponentsModule'
             },
             {
                 path: 'icons',
-                loadChildren: './icons/icons.module#IconsModule'
+                loadChildren: './views/icons/icons.module#IconsModule'
             },
             {
                 path: 'widgets',
-                loadChildren: './widgets/widgets.module#WidgetsModule'
+                loadChildren: './views/widgets/widgets.module#WidgetsModule'
             },
             {
                 path: 'charts',
-                loadChildren: './chartjs/chartjs.module#ChartJSModule'
+                loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
             }
         ]
     },
     {
         path: 'pages',
-        component: __WEBPACK_IMPORTED_MODULE_3__layouts_simple_layout_component__["a" /* SimpleLayoutComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_2__containers__["b" /* SimpleLayout */],
         data: {
             title: 'Pages'
         },
         children: [
             {
                 path: '',
-                loadChildren: './pages/pages.module#PagesModule',
+                loadChildren: './views/pages/pages.module#PagesModule',
             }
         ]
     }
@@ -238,58 +247,18 @@ AppRoutingModule = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/layouts/full-layout.component.html":
+/***/ "../../../../../src/app/components/app-aside/app-aside.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"app-header navbar\">\n  <button class=\"navbar-toggler d-lg-none\" type=\"button\" appMobileSidebarToggler>&#9776;</button>\n  <a class=\"navbar-brand\" href=\"#\"></a>\n  <button class=\"navbar-toggler d-md-down-none\" type=\"button\" appSidebarToggler>&#9776;</button>\n  <ul class=\"nav navbar-nav d-md-down-none\">\n    <li class=\"nav-item px-3\">\n      <a class=\"nav-link\" href=\"#\">Dashboard</a>\n    </li>\n    <li class=\"nav-item px-3\">\n      <a class=\"nav-link\" href=\"#\">Users</a>\n    </li>\n    <li class=\"nav-item px-3\">\n      <a class=\"nav-link\" href=\"#\">Settings</a>\n    </li>\n  </ul>\n  <ul class=\"nav navbar-nav ml-auto\">\n    <li class=\"nav-item d-md-down-none\">\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-bell\"></i><span class=\"badge badge-pill badge-danger\">5</span></a>\n    </li>\n    <li class=\"nav-item d-md-down-none\">\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-list\"></i></a>\n    </li>\n    <li class=\"nav-item d-md-down-none\">\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-location-pin\"></i></a>\n    </li>\n    <li class=\"nav-item dropdown\" dropdown (onToggle)=\"toggled($event)\">\n      <a href class=\"nav-link dropdown-toggle\" dropdownToggle (click)=\"false\">\n        <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n        <span class=\"d-md-down-none\">admin</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n\n        <div class=\"dropdown-header text-center\"><strong>Account</strong></div>\n\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-bell-o\"></i> Updates<span class=\"badge badge-info\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-envelope-o\"></i> Messages<span class=\"badge badge-success\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-tasks\"></i> Tasks<span class=\"badge badge-danger\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-comments\"></i> Comment<span class=\"badge badge-warning\">42</span></a>\n\n        <div class=\"dropdown-header text-center\"><strong>Settings</strong></div>\n\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-user\"></i> Profile</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-wrench\"></i> Setting</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-usd\"></i> Payments<span class=\"badge badge-default\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-file\"></i> Projects<span class=\"badge badge-primary\">42</span></a>\n        <div class=\"divider\"></div>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-shield\"></i> Lock account</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-lock\"></i> Logout</a>\n      </div>\n    </li>\n    <button class=\"navbar-toggler d-md-down-none\" type=\"button\" appAsideMenuToggler>&#9776;</button>\n  </ul>\n</header>\n\n<div class=\"app-body\">\n  <div class=\"sidebar\">\n    <nav class=\"sidebar-nav\">\n      <ul class=\"nav\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/dashboard']\"><i class=\"icon-speedometer\"></i> Dashboard <span class=\"badge badge-info\">NEW</span></a>\n        </li>\n        <li class=\"divider\"></li>\n        <li class=\"nav-title\">\n          UI Elements\n        </li>\n        <li class=\"nav-item nav-dropdown\" routerLinkActive=\"open\" appNavDropdown>\n          <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-puzzle\"></i> Components</a>\n          <ul class=\"nav-dropdown-items\">\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/buttons']\"><i class=\"icon-puzzle\"></i> Buttons</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/social-buttons']\"><i class=\"icon-puzzle\"></i> Social Buttons</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/cards']\"><i class=\"icon-puzzle\"></i> Cards</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/forms']\"><i class=\"icon-puzzle\"></i> Forms</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/modals']\"><i class=\"icon-puzzle\"></i> Modals</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/switches']\"><i class=\"icon-puzzle\"></i> Switches</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/tables']\"><i class=\"icon-puzzle\"></i> Tables</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/tabs']\"><i class=\"icon-puzzle\"></i> Tabs</a>\n            </li>\n          </ul>\n        </li>\n        <li class=\"nav-item nav-dropdown\" routerLinkActive=\"open\" appNavDropdown>\n          <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-star\"></i> Icons</a>\n          <ul class=\"nav-dropdown-items\">\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/icons/font-awesome']\"><i class=\"icon-star\"></i> Font Awesome</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/icons/simple-line-icons']\"><i class=\"icon-star\"></i> Simple Line Icons</a>\n            </li>\n          </ul>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/widgets']\"><i class=\"icon-calculator\"></i> Widgets <span class=\"badge badge-info\">NEW</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/charts']\"><i class=\"icon-pie-chart\"></i> Charts</a>\n        </li>\n        <li class=\"divider\"></li>\n        <li class=\"nav-title\">\n          Extras\n        </li>\n        <li class=\"nav-item nav-dropdown\" appNavDropdown>\n          <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-star\"></i> Pages</a>\n          <ul class=\"nav-dropdown-items\">\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/login']\"><i class=\"icon-star\"></i> Login</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/register']\"><i class=\"icon-star\"></i> Register</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/404']\"><i class=\"icon-star\"></i> Error 404</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/500']\"><i class=\"icon-star\"></i> Error 500</a>\n            </li>\n          </ul>\n        </li>\n      </ul>\n    </nav>\n  </div>\n\n  <!-- Main content -->\n  <main class=\"main\">\n\n    <!-- Breadcrumb -->\n    <ol class=\"breadcrumb\">\n      <app-breadcrumbs></app-breadcrumbs>\n      <!-- Breadcrumb Menu-->\n      <li class=\"breadcrumb-menu d-md-down-none\">\n        <div class=\"btn-group\" role=\"group\" aria-label=\"Button group with nested dropdown\">\n          <a class=\"btn\" href=\"#\"><i class=\"icon-speech\"></i></a>\n          <a class=\"btn\" [routerLink]=\"['/dashboard']\"><i class=\"icon-graph\"></i> &nbsp;Dashboard</a>\n          <a class=\"btn\" href=\"#\"><i class=\"icon-settings\"></i> &nbsp;Settings</a>\n        </div>\n      </li>\n    </ol>\n\n    <div class=\"container-fluid\">\n      <router-outlet></router-outlet>\n    </div><!-- /.conainer-fluid -->\n  </main>\n\n  <aside class=\"aside-menu\">\n    <tabset>\n      <tab>\n        <ng-template tabHeading><i class=\"icon-list\"></i></ng-template>\n        <div class=\"callout m-0 py-2 text-muted text-center bg-light text-uppercase\">\n          <small><b>Today</b></small>\n        </div>\n        <hr class=\"transparent mx-3 my-0\">\n        <div class=\"callout callout-warning m-0 py-3\">\n          <div class=\"avatar float-right\">\n            <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div>Meeting with <strong>Lucas</strong></div>\n          <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 1 - 3pm</small>\n          <small class=\"text-muted\"><i class=\"icon-location-pin\"></i>&nbsp; Palo Alto, CA </small>\n        </div>\n        <hr class=\"mx-3 my-0\">\n        <div class=\"callout callout-info m-0 py-3\">\n          <div class=\"avatar float-right\">\n            <img src=\"assets/img/avatars/4.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div>Skype with <strong>Megan</strong></div>\n          <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 4 - 5pm</small>\n          <small class=\"text-muted\"><i class=\"icon-social-skype\"></i>&nbsp; On-line </small>\n        </div>\n        <hr class=\"transparent mx-3 my-0\">\n        <div class=\"callout m-0 py-2 text-muted text-center bg-light text-uppercase\">\n          <small><b>Tomorrow</b></small>\n        </div>\n        <hr class=\"transparent mx-3 my-0\">\n        <div class=\"callout callout-danger m-0 py-3\">\n          <div>New UI Project - <strong>deadline</strong></div>\n          <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 10 - 11pm</small>\n          <small class=\"text-muted\"><i class=\"icon-home\"></i>&nbsp; creativeLabs HQ </small>\n          <div class=\"avatars-stack mt-2\">\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/2.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/3.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/4.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/5.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n          </div>\n        </div>\n        <hr class=\"mx-3 my-0\">\n        <div class=\"callout callout-success m-0 py-3\">\n          <div><strong>#10 Startups.Garden</strong> Meetup</div>\n          <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 1 - 3pm</small>\n          <small class=\"text-muted\"><i class=\"icon-location-pin\"></i>&nbsp; Palo Alto, CA </small>\n        </div>\n        <hr class=\"mx-3 my-0\">\n        <div class=\"callout callout-primary m-0 py-3\">\n          <div><strong>Team meeting</strong></div>\n          <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 4 - 6pm</small>\n          <small class=\"text-muted\"><i class=\"icon-home\"></i>&nbsp; creativeLabs HQ </small>\n          <div class=\"avatars-stack mt-2\">\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/2.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/3.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/4.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/5.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n            <div class=\"avatar avatar-xs\">\n              <img src=\"assets/img/avatars/8.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n            </div>\n          </div>\n        </div>\n        <hr class=\"mx-3 my-0\">\n      </tab>\n      <tab>\n        <ng-template tabHeading><i class=\"icon-speech\"></i></ng-template>\n        <div class=\"p-3\">\n          <div class=\"message\">\n            <div class=\"py-3 pb-5 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-success\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">Lukasz Holeczek</small>\n              <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n          </div>\n          <hr>\n          <div class=\"message\">\n            <div class=\"py-3 pb-5 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-success\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">Lukasz Holeczek</small>\n              <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n          </div>\n          <hr>\n          <div class=\"message\">\n            <div class=\"py-3 pb-5 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-success\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">Lukasz Holeczek</small>\n              <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n          </div>\n          <hr>\n          <div class=\"message\">\n            <div class=\"py-3 pb-5 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-success\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">Lukasz Holeczek</small>\n              <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n          </div>\n          <hr>\n          <div class=\"message\">\n            <div class=\"py-3 pb-5 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-success\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">Lukasz Holeczek</small>\n              <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n          </div>\n        </div>\n      </tab>\n      <tab>\n        <ng-template tabHeading><i class=\"icon-settings\"></i></ng-template>\n        <div class=\"p-3\">\n          <h6>Settings</h6>\n\n          <div class=\"aside-options\">\n            <div class=\"clearfix mt-4\">\n              <small><b>Option 1</b></small>\n              <label class=\"switch switch-text switch-pill switch-success switch-sm float-right\">\n                <input type=\"checkbox\" class=\"switch-input\" checked>\n                <span class=\"switch-label\" data-on=\"On\" data-off=\"Off\"></span>\n                <span class=\"switch-handle\"></span>\n              </label>\n            </div>\n            <div>\n              <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>\n            </div>\n          </div>\n\n          <div class=\"aside-options\">\n            <div class=\"clearfix mt-3\">\n              <small><b>Option 2</b></small>\n              <label class=\"switch switch-text switch-pill switch-success switch-sm float-right\">\n                <input type=\"checkbox\" class=\"switch-input\">\n                <span class=\"switch-label\" data-on=\"On\" data-off=\"Off\"></span>\n                <span class=\"switch-handle\"></span>\n              </label>\n            </div>\n            <div>\n              <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>\n            </div>\n          </div>\n\n          <div class=\"aside-options\">\n            <div class=\"clearfix mt-3\">\n              <small><b>Option 3</b></small>\n              <label class=\"switch switch-text switch-pill switch-success switch-sm float-right\">\n                <input type=\"checkbox\" class=\"switch-input\">\n                <span class=\"switch-label\" data-on=\"On\" data-off=\"Off\"></span>\n                <span class=\"switch-handle\"></span>\n              </label>\n            </div>\n          </div>\n\n          <div class=\"aside-options\">\n            <div class=\"clearfix mt-3\">\n              <small><b>Option 4</b></small>\n              <label class=\"switch switch-text switch-pill switch-success switch-sm float-right\">\n                <input type=\"checkbox\" class=\"switch-input\" checked>\n                <span class=\"switch-label\" data-on=\"On\" data-off=\"Off\"></span>\n                <span class=\"switch-handle\"></span>\n              </label>\n            </div>\n          </div>\n\n          <hr>\n          <h6>System Utilization</h6>\n\n          <div class=\"text-uppercase mb-1 mt-4\"><small><b>CPU Usage</b></small></div>\n          <div class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: 25%\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </div>\n          <small class=\"text-muted\">348 Processes. 1/4 Cores.</small>\n\n          <div class=\"text-uppercase mb-1 mt-2\"><small><b>Memory Usage</b></small></div>\n          <div class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-warning\" role=\"progressbar\" style=\"width: 70%\" aria-valuenow=\"70\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </div>\n          <small class=\"text-muted\">11444GB/16384MB</small>\n\n          <div class=\"text-uppercase mb-1 mt-2\"><small><b>SSD 1 Usage</b></small></div>\n          <div class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-danger\" role=\"progressbar\" style=\"width: 95%\" aria-valuenow=\"95\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </div>\n          <small class=\"text-muted\">243GB/256GB</small>\n\n          <div class=\"text-uppercase mb-1 mt-2\"><small><b>SSD 2 Usage</b></small></div>\n          <div class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 10%\" aria-valuenow=\"10\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </div>\n          <small class=\"text-muted\">25GB/256GB</small>\n        </div>\n      </tab>\n    </tabset>\n  </aside>\n</div>\n\n<footer class=\"app-footer\">\n  <a href=\"http://coreui.io\">CoreUI</a> &copy; 2017 creativeLabs.\n  <span class=\"float-right\">Powered by <a href=\"http://coreui.io\">CoreUI</a></span>\n</footer>\n"
+module.exports = "<aside class=\"aside-menu\">\n  <tabset>\n    <tab>\n      <ng-template tabHeading><i class=\"icon-list\"></i></ng-template>\n      <div class=\"callout m-0 py-2 text-muted text-center bg-light text-uppercase\">\n        <small><b>Today</b></small>\n      </div>\n      <hr class=\"transparent mx-3 my-0\">\n      <div class=\"callout callout-warning m-0 py-3\">\n        <div class=\"avatar float-right\">\n          <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n        </div>\n        <div>Meeting with <strong>Lucas</strong></div>\n        <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 1 - 3pm</small>\n        <small class=\"text-muted\"><i class=\"icon-location-pin\"></i>&nbsp; Palo Alto, CA </small>\n      </div>\n      <hr class=\"mx-3 my-0\">\n      <div class=\"callout callout-info m-0 py-3\">\n        <div class=\"avatar float-right\">\n          <img src=\"assets/img/avatars/4.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n        </div>\n        <div>Skype with <strong>Megan</strong></div>\n        <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 4 - 5pm</small>\n        <small class=\"text-muted\"><i class=\"icon-social-skype\"></i>&nbsp; On-line </small>\n      </div>\n      <hr class=\"transparent mx-3 my-0\">\n      <div class=\"callout m-0 py-2 text-muted text-center bg-light text-uppercase\">\n        <small><b>Tomorrow</b></small>\n      </div>\n      <hr class=\"transparent mx-3 my-0\">\n      <div class=\"callout callout-danger m-0 py-3\">\n        <div>New UI Project - <strong>deadline</strong></div>\n        <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 10 - 11pm</small>\n        <small class=\"text-muted\"><i class=\"icon-home\"></i>&nbsp; creativeLabs HQ </small>\n        <div class=\"avatars-stack mt-2\">\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/2.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/3.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/4.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/5.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n        </div>\n      </div>\n      <hr class=\"mx-3 my-0\">\n      <div class=\"callout callout-success m-0 py-3\">\n        <div><strong>#10 Startups.Garden</strong> Meetup</div>\n        <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 1 - 3pm</small>\n        <small class=\"text-muted\"><i class=\"icon-location-pin\"></i>&nbsp; Palo Alto, CA </small>\n      </div>\n      <hr class=\"mx-3 my-0\">\n      <div class=\"callout callout-primary m-0 py-3\">\n        <div><strong>Team meeting</strong></div>\n        <small class=\"text-muted mr-3\"><i class=\"icon-calendar\"></i>&nbsp; 4 - 6pm</small>\n        <small class=\"text-muted\"><i class=\"icon-home\"></i>&nbsp; creativeLabs HQ </small>\n        <div class=\"avatars-stack mt-2\">\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/2.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/3.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/4.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/5.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n          <div class=\"avatar avatar-xs\">\n            <img src=\"assets/img/avatars/8.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n          </div>\n        </div>\n      </div>\n      <hr class=\"mx-3 my-0\">\n    </tab>\n    <tab>\n      <ng-template tabHeading><i class=\"icon-speech\"></i></ng-template>\n      <div class=\"p-3\">\n        <div class=\"message\">\n          <div class=\"py-3 pb-5 mr-3 float-left\">\n            <div class=\"avatar\">\n              <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n              <span class=\"avatar-status badge-success\"></span>\n            </div>\n          </div>\n          <div>\n            <small class=\"text-muted\">Lukasz Holeczek</small>\n            <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n          </div>\n          <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n          <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n        </div>\n        <hr>\n        <div class=\"message\">\n          <div class=\"py-3 pb-5 mr-3 float-left\">\n            <div class=\"avatar\">\n              <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n              <span class=\"avatar-status badge-success\"></span>\n            </div>\n          </div>\n          <div>\n            <small class=\"text-muted\">Lukasz Holeczek</small>\n            <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n          </div>\n          <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n          <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n        </div>\n        <hr>\n        <div class=\"message\">\n          <div class=\"py-3 pb-5 mr-3 float-left\">\n            <div class=\"avatar\">\n              <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n              <span class=\"avatar-status badge-success\"></span>\n            </div>\n          </div>\n          <div>\n            <small class=\"text-muted\">Lukasz Holeczek</small>\n            <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n          </div>\n          <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n          <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n        </div>\n        <hr>\n        <div class=\"message\">\n          <div class=\"py-3 pb-5 mr-3 float-left\">\n            <div class=\"avatar\">\n              <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n              <span class=\"avatar-status badge-success\"></span>\n            </div>\n          </div>\n          <div>\n            <small class=\"text-muted\">Lukasz Holeczek</small>\n            <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n          </div>\n          <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n          <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n        </div>\n        <hr>\n        <div class=\"message\">\n          <div class=\"py-3 pb-5 mr-3 float-left\">\n            <div class=\"avatar\">\n              <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n              <span class=\"avatar-status badge-success\"></span>\n            </div>\n          </div>\n          <div>\n            <small class=\"text-muted\">Lukasz Holeczek</small>\n            <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n          </div>\n          <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n          <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>\n        </div>\n      </div>\n    </tab>\n    <tab>\n      <ng-template tabHeading><i class=\"icon-settings\"></i></ng-template>\n      <div class=\"p-3\">\n        <h6>Settings</h6>\n\n        <div class=\"aside-options\">\n          <div class=\"clearfix mt-4\">\n            <small><b>Option 1</b></small>\n            <label class=\"switch switch-text switch-pill switch-success switch-sm float-right\">\n              <input type=\"checkbox\" class=\"switch-input\" checked>\n              <span class=\"switch-label\" data-on=\"On\" data-off=\"Off\"></span>\n              <span class=\"switch-handle\"></span>\n            </label>\n          </div>\n          <div>\n            <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>\n          </div>\n        </div>\n\n        <div class=\"aside-options\">\n          <div class=\"clearfix mt-3\">\n            <small><b>Option 2</b></small>\n            <label class=\"switch switch-text switch-pill switch-success switch-sm float-right\">\n              <input type=\"checkbox\" class=\"switch-input\">\n              <span class=\"switch-label\" data-on=\"On\" data-off=\"Off\"></span>\n              <span class=\"switch-handle\"></span>\n            </label>\n          </div>\n          <div>\n            <small class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>\n          </div>\n        </div>\n\n        <div class=\"aside-options\">\n          <div class=\"clearfix mt-3\">\n            <small><b>Option 3</b></small>\n            <label class=\"switch switch-text switch-pill switch-success switch-sm float-right\">\n              <input type=\"checkbox\" class=\"switch-input\">\n              <span class=\"switch-label\" data-on=\"On\" data-off=\"Off\"></span>\n              <span class=\"switch-handle\"></span>\n            </label>\n          </div>\n        </div>\n\n        <div class=\"aside-options\">\n          <div class=\"clearfix mt-3\">\n            <small><b>Option 4</b></small>\n            <label class=\"switch switch-text switch-pill switch-success switch-sm float-right\">\n              <input type=\"checkbox\" class=\"switch-input\" checked>\n              <span class=\"switch-label\" data-on=\"On\" data-off=\"Off\"></span>\n              <span class=\"switch-handle\"></span>\n            </label>\n          </div>\n        </div>\n\n        <hr>\n        <h6>System Utilization</h6>\n\n        <div class=\"text-uppercase mb-1 mt-4\"><small><b>CPU Usage</b></small></div>\n        <div class=\"progress progress-xs\">\n          <div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: 25%\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n        </div>\n        <small class=\"text-muted\">348 Processes. 1/4 Cores.</small>\n\n        <div class=\"text-uppercase mb-1 mt-2\"><small><b>Memory Usage</b></small></div>\n        <div class=\"progress progress-xs\">\n          <div class=\"progress-bar bg-warning\" role=\"progressbar\" style=\"width: 70%\" aria-valuenow=\"70\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n        </div>\n        <small class=\"text-muted\">11444GB/16384MB</small>\n\n        <div class=\"text-uppercase mb-1 mt-2\"><small><b>SSD 1 Usage</b></small></div>\n        <div class=\"progress progress-xs\">\n          <div class=\"progress-bar bg-danger\" role=\"progressbar\" style=\"width: 95%\" aria-valuenow=\"95\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n        </div>\n        <small class=\"text-muted\">243GB/256GB</small>\n\n        <div class=\"text-uppercase mb-1 mt-2\"><small><b>SSD 2 Usage</b></small></div>\n        <div class=\"progress progress-xs\">\n          <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 10%\" aria-valuenow=\"10\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n        </div>\n        <small class=\"text-muted\">25GB/256GB</small>\n      </div>\n    </tab>\n  </tabset>\n</aside>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/layouts/full-layout.component.ts":
+/***/ "../../../../../src/app/components/app-aside/app-aside.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FullLayoutComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var FullLayoutComponent = (function () {
-    function FullLayoutComponent() {
-        this.disabled = false;
-        this.status = { isopen: false };
-    }
-    FullLayoutComponent.prototype.toggled = function (open) {
-        console.log('Dropdown is now: ', open);
-    };
-    FullLayoutComponent.prototype.toggleDropdown = function ($event) {
-        $event.preventDefault();
-        $event.stopPropagation();
-        this.status.isopen = !this.status.isopen;
-    };
-    FullLayoutComponent.prototype.ngOnInit = function () { };
-    return FullLayoutComponent;
-}());
-FullLayoutComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-dashboard',
-        template: __webpack_require__("../../../../../src/app/layouts/full-layout.component.html")
-    })
-], FullLayoutComponent);
-
-//# sourceMappingURL=full-layout.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layouts/simple-layout.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleLayoutComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppAside; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -301,25 +270,714 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SimpleLayoutComponent = (function () {
-    function SimpleLayoutComponent() {
+var AppAside = (function () {
+    function AppAside(el) {
+        this.el = el;
     }
-    SimpleLayoutComponent.prototype.ngOnInit = function () { };
-    return SimpleLayoutComponent;
+    //wait for the component to render completely
+    AppAside.prototype.ngOnInit = function () {
+        var nativeElement = this.el.nativeElement, parentElement = nativeElement.parentElement;
+        // move all children out of the element
+        while (nativeElement.firstChild) {
+            parentElement.insertBefore(nativeElement.firstChild, nativeElement);
+        }
+        // remove the empty element(the host)
+        parentElement.removeChild(nativeElement);
+    };
+    return AppAside;
 }());
-SimpleLayoutComponent = __decorate([
+AppAside = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-aside',
+        template: __webpack_require__("../../../../../src/app/components/app-aside/app-aside.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], AppAside);
+
+var _a;
+//# sourceMappingURL=app-aside.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-aside/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_aside_component__ = __webpack_require__("../../../../../src/app/components/app-aside/app-aside.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_aside_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-breadcrumbs/app-breadcrumbs.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppBreadcrumbs; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter__ = __webpack_require__("../../../../rxjs/add/operator/filter.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AppBreadcrumbs = (function () {
+    function AppBreadcrumbs(router, route) {
+        var _this = this;
+        this.router = router;
+        this.route = route;
+        this.router.events.filter(function (event) { return event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* NavigationEnd */]; }).subscribe(function (event) {
+            _this.breadcrumbs = [];
+            var currentRoute = _this.route.root, url = '';
+            do {
+                var childrenRoutes = currentRoute.children;
+                currentRoute = null;
+                childrenRoutes.forEach(function (route) {
+                    if (route.outlet === 'primary') {
+                        var routeSnapshot = route.snapshot;
+                        url += '/' + routeSnapshot.url.map(function (segment) { return segment.path; }).join('/');
+                        _this.breadcrumbs.push({
+                            label: route.snapshot.data,
+                            url: url
+                        });
+                        currentRoute = route;
+                    }
+                });
+            } while (currentRoute);
+        });
+    }
+    return AppBreadcrumbs;
+}());
+AppBreadcrumbs = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-breadcrumbs',
+        template: "\n  <ng-template ngFor let-breadcrumb [ngForOf]=\"breadcrumbs\" let-last = last>\n    <li class=\"breadcrumb-item\"\n        *ngIf=\"breadcrumb.label.title&&breadcrumb.url.substring(breadcrumb.url.length-1) == '/'||breadcrumb.label.title&&last\"\n        [ngClass]=\"{active: last}\">\n      <a *ngIf=\"!last\" [routerLink]=\"breadcrumb.url\">{{breadcrumb.label.title}}</a>\n      <span *ngIf=\"last\" [routerLink]=\"breadcrumb.url\">{{breadcrumb.label.title}}</span>\n    </li>\n  </ng-template>"
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object])
+], AppBreadcrumbs);
+
+var _a, _b;
+//# sourceMappingURL=app-breadcrumbs.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-breadcrumbs/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_breadcrumbs_component__ = __webpack_require__("../../../../../src/app/components/app-breadcrumbs/app-breadcrumbs.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_breadcrumbs_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-footer/app-footer.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<footer class=\"app-footer\">\n  <span><a href=\"http://coreui.io\">CoreUI</a> &copy; 2017 creativeLabs.</span>\n  <span class=\"ml-auto\">Powered by <a href=\"http://coreui.io\">CoreUI</a></span>\n</footer>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-footer/app-footer.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppFooter; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AppFooter = (function () {
+    function AppFooter(el) {
+        this.el = el;
+    }
+    //wait for the component to render completely
+    AppFooter.prototype.ngOnInit = function () {
+        var nativeElement = this.el.nativeElement, parentElement = nativeElement.parentElement;
+        // move all children out of the element
+        while (nativeElement.firstChild) {
+            parentElement.insertBefore(nativeElement.firstChild, nativeElement);
+        }
+        // remove the empty element(the host)
+        parentElement.removeChild(nativeElement);
+    };
+    return AppFooter;
+}());
+AppFooter = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-footer',
+        template: __webpack_require__("../../../../../src/app/components/app-footer/app-footer.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], AppFooter);
+
+var _a;
+//# sourceMappingURL=app-footer.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-footer/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_footer_component__ = __webpack_require__("../../../../../src/app/components/app-footer/app-footer.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_footer_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-header/app-header.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<header class=\"app-header navbar\">\n  <button class=\"navbar-toggler d-lg-none\" type=\"button\" appMobileSidebarToggler>&#9776;</button>\n  <a class=\"navbar-brand\" href=\"#\"></a>\n  <button class=\"navbar-toggler d-md-down-none\" type=\"button\" appSidebarToggler>&#9776;</button>\n  <ul class=\"nav navbar-nav d-md-down-none\">\n    <li class=\"nav-item px-3\">\n      <a class=\"nav-link\" href=\"#\">Dashboard</a>\n    </li>\n    <li class=\"nav-item px-3\">\n      <a class=\"nav-link\" href=\"#\">Users</a>\n    </li>\n    <li class=\"nav-item px-3\">\n      <a class=\"nav-link\" href=\"#\">Settings</a>\n    </li>\n  </ul>\n  <ul class=\"nav navbar-nav ml-auto\">\n    <li class=\"nav-item dropdown d-md-down-none\" dropdown placement=\"bottom right\">\n      <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n        <i class=\"icon-bell\"></i><span class=\"badge badge-pill badge-danger\">5</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right dropdown-menu-lg\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n        <div class=\"dropdown-header text-center\"><strong>You have 5 notifications</strong></div>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-user-follow text-success\"></i> New user registered\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-user-unfollow text-danger\"></i> User deleted\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-chart text-info\"></i> Sales report is ready\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-basket-loaded text-primary\"></i> New client\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-speedometer text-warning\"></i> Server overloaded\n        </a>\n        <div class=\"dropdown-header text-center\"><strong>Server</strong></div>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"text-uppercase mb-1\"><small><b>CPU Usage</b></small></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: 25%\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n          <small class=\"text-muted\">348 Processes. 1/4 Cores.</small>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"text-uppercase mb-1\"><small><b>Memory Usage</b></small></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-warning\" role=\"progressbar\" style=\"width: 70%\" aria-valuenow=\"70\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n          <small class=\"text-muted\">11444GB/16384MB</small>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"text-uppercase mb-1\"><small><b>SSD 1 Usage</b></small></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-danger\" role=\"progressbar\" style=\"width: 95%\" aria-valuenow=\"95\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n          <small class=\"text-muted\">243GB/256GB</small>\n        </a>\n      </div>\n    </li>\n    <li class=\"nav-item dropdown d-md-down-none\" dropdown placement=\"bottom right\">\n      <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n        <i class=\"icon-list\"></i><span class=\"badge badge-pill badge-warning\">15</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right dropdown-menu-lg\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n        <div class=\"dropdown-header text-center\"><strong>You have 5 pending tasks</strong></div>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">Upgrade NPM &amp; Bower <span class=\"float-right\"><strong>0%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: 0%\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">ReactJS Version <span class=\"float-right\"><strong>25%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-danger\" role=\"progressbar\" style=\"width: 25%\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">VueJS Version <span class=\"float-right\"><strong>50%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-warning\" role=\"progressbar\" style=\"width: 50%\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">Add new layouts <span class=\"float-right\"><strong>75%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: 75%\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">Angular 2 Cli Version <span class=\"float-right\"><strong>100%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 100%\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item text-center\">\n          <strong>View all tasks</strong>\n        </a>\n      </div>\n    </li>\n    <li class=\"nav-item dropdown d-md-down-none\" dropdown placement=\"bottom right\">\n      <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n        <i class=\"icon-envelope-letter\"></i><span class=\"badge badge-pill badge-info\">7</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right dropdown-menu-lg\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n        <div class=\"dropdown-header text-center\"><strong>You have 4 messages</strong></div>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"message\">\n            <div class=\"py-3 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-success\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">John Doe</small>\n              <small class=\"text-muted float-right mt-1\">Just now</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\"><span class=\"fa fa-exclamation text-danger\"></span> Important message</div>\n            <div class=\"small text-muted text-truncate\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>\n          </div>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"message\">\n            <div class=\"py-3 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-warning\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">John Doe</small>\n              <small class=\"text-muted float-right mt-1\">5 minutes ago</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <div class=\"small text-muted text-truncate\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>\n          </div>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"message\">\n            <div class=\"py-3 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/5.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-danger\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">John Doe</small>\n              <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <div class=\"small text-muted text-truncate\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>\n          </div>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"message\">\n            <div class=\"py-3 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/4.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-info\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">John Doe</small>\n              <small class=\"text-muted float-right mt-1\">4:03 PM</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <div class=\"small text-muted text-truncate\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>\n          </div>\n        </a>\n        <a href=\"#\" class=\"dropdown-item text-center\">\n          <strong>View all messages</strong>\n        </a>\n      </div>\n    </li>\n    <li class=\"nav-item d-md-down-none\">\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-location-pin\"></i></a>\n    </li>\n    <li class=\"nav-item dropdown\" dropdown placement=\"bottom right\">\n      <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n        <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\"/>\n        <span class=\"d-md-down-none\">admin</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n        <div class=\"dropdown-header text-center\"><strong>Account</strong></div>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-bell-o\"></i> Updates<span class=\"badge badge-info\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-envelope-o\"></i> Messages<span class=\"badge badge-success\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-tasks\"></i> Tasks<span class=\"badge badge-danger\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-comments\"></i> Comment<span class=\"badge badge-warning\">42</span></a>\n        <div class=\"dropdown-header text-center\"><strong>Settings</strong></div>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-user\"></i> Profile</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-wrench\"></i> Setting</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-usd\"></i> Payments<span class=\"badge badge-dark\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-file\"></i> Projects<span class=\"badge badge-primary\">42</span></a>\n        <div class=\"divider\"></div>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-shield\"></i> Lock account</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-lock\"></i> Logout</a>\n      </div>\n    </li>\n    <button class=\"navbar-toggler d-md-down-none\" type=\"button\" appAsideMenuToggler>&#9776;</button>\n  </ul>\n</header>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-header/app-header.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppHeader; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AppHeader = (function () {
+    function AppHeader(el) {
+        this.el = el;
+    }
+    //wait for the component to render completely
+    AppHeader.prototype.ngOnInit = function () {
+        var nativeElement = this.el.nativeElement, parentElement = nativeElement.parentElement;
+        // move all children out of the element
+        while (nativeElement.firstChild) {
+            parentElement.insertBefore(nativeElement.firstChild, nativeElement);
+        }
+        // remove the empty element(the host)
+        parentElement.removeChild(nativeElement);
+    };
+    return AppHeader;
+}());
+AppHeader = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-header',
+        template: __webpack_require__("../../../../../src/app/components/app-header/app-header.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], AppHeader);
+
+var _a;
+//# sourceMappingURL=app-header.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-header/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_header_component__ = __webpack_require__("../../../../../src/app/components/app-header/app-header.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_header_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-footer/app-sidebar-footer.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <div class=\"sidebar-footer\"></div> -->\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-footer/app-sidebar-footer.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSidebarFooter; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AppSidebarFooter = (function () {
+    function AppSidebarFooter(el) {
+        this.el = el;
+    }
+    //wait for the component to render completely
+    AppSidebarFooter.prototype.ngOnInit = function () {
+        var nativeElement = this.el.nativeElement, parentElement = nativeElement.parentElement;
+        // move all children out of the element
+        while (nativeElement.firstChild) {
+            parentElement.insertBefore(nativeElement.firstChild, nativeElement);
+        }
+        // remove the empty element(the host)
+        parentElement.removeChild(nativeElement);
+    };
+    return AppSidebarFooter;
+}());
+AppSidebarFooter = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-sidebar-footer',
+        template: __webpack_require__("../../../../../src/app/components/app-sidebar-footer/app-sidebar-footer.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], AppSidebarFooter);
+
+var _a;
+//# sourceMappingURL=app-sidebar-footer.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-footer/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_sidebar_footer_component__ = __webpack_require__("../../../../../src/app/components/app-sidebar-footer/app-sidebar-footer.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_sidebar_footer_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-form/app-sidebar-form.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <form class=\"sidebar-form\"></form> -->\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-form/app-sidebar-form.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSidebarForm; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AppSidebarForm = (function () {
+    function AppSidebarForm(el) {
+        this.el = el;
+    }
+    //wait for the component to render completely
+    AppSidebarForm.prototype.ngOnInit = function () {
+        var nativeElement = this.el.nativeElement, parentElement = nativeElement.parentElement;
+        // move all children out of the element
+        while (nativeElement.firstChild) {
+            parentElement.insertBefore(nativeElement.firstChild, nativeElement);
+        }
+        // remove the empty element(the host)
+        parentElement.removeChild(nativeElement);
+    };
+    return AppSidebarForm;
+}());
+AppSidebarForm = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-sidebar-form',
+        template: __webpack_require__("../../../../../src/app/components/app-sidebar-form/app-sidebar-form.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], AppSidebarForm);
+
+var _a;
+//# sourceMappingURL=app-sidebar-form.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-form/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_sidebar_form_component__ = __webpack_require__("../../../../../src/app/components/app-sidebar-form/app-sidebar-form.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_sidebar_form_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-header/app-sidebar-header.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <div class=\"sidebar-header\"></div> -->\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-header/app-sidebar-header.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSidebarHeader; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AppSidebarHeader = (function () {
+    function AppSidebarHeader(el) {
+        this.el = el;
+    }
+    //wait for the component to render completely
+    AppSidebarHeader.prototype.ngOnInit = function () {
+        var nativeElement = this.el.nativeElement, parentElement = nativeElement.parentElement;
+        // move all children out of the element
+        while (nativeElement.firstChild) {
+            parentElement.insertBefore(nativeElement.firstChild, nativeElement);
+        }
+        // remove the empty element(the host)
+        parentElement.removeChild(nativeElement);
+    };
+    return AppSidebarHeader;
+}());
+AppSidebarHeader = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-sidebar-header',
+        template: __webpack_require__("../../../../../src/app/components/app-sidebar-header/app-sidebar-header.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], AppSidebarHeader);
+
+var _a;
+//# sourceMappingURL=app-sidebar-header.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-header/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_sidebar_header_component__ = __webpack_require__("../../../../../src/app/components/app-sidebar-header/app-sidebar-header.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_sidebar_header_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-minimizer/app-sidebar-minimizer.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"sidebar-minimizer\" type=\"button\" appSidebarMinimizer appBrandMinimizer></button>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-minimizer/app-sidebar-minimizer.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSidebarMinimizer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AppSidebarMinimizer = (function () {
+    function AppSidebarMinimizer(el) {
+        this.el = el;
+    }
+    //wait for the component to render completely
+    AppSidebarMinimizer.prototype.ngOnInit = function () {
+        var nativeElement = this.el.nativeElement, parentElement = nativeElement.parentElement;
+        // move all children out of the element
+        while (nativeElement.firstChild) {
+            parentElement.insertBefore(nativeElement.firstChild, nativeElement);
+        }
+        // remove the empty element(the host)
+        parentElement.removeChild(nativeElement);
+    };
+    return AppSidebarMinimizer;
+}());
+AppSidebarMinimizer = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-sidebar-minimizer',
+        template: __webpack_require__("../../../../../src/app/components/app-sidebar-minimizer/app-sidebar-minimizer.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], AppSidebarMinimizer);
+
+var _a;
+//# sourceMappingURL=app-sidebar-minimizer.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar-minimizer/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_sidebar_minimizer_component__ = __webpack_require__("../../../../../src/app/components/app-sidebar-minimizer/app-sidebar-minimizer.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_sidebar_minimizer_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar/app-sidebar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"sidebar\">\n  <app-sidebar-header></app-sidebar-header>\n  <app-sidebar-form></app-sidebar-form>\n  <nav class=\"sidebar-nav\">\n    <ul class=\"nav\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/dashboard']\"><i class=\"icon-speedometer\"></i> Dashboard <span class=\"badge badge-info\">NEW</span></a>\n      </li>\n      <li class=\"divider\"></li>\n      <li class=\"nav-title\">\n        UI Elements\n      </li>\n      <li class=\"nav-item nav-dropdown\" routerLinkActive=\"open\" appNavDropdown>\n        <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-puzzle\"></i> Components</a>\n        <ul class=\"nav-dropdown-items\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/buttons']\"><i class=\"icon-puzzle\"></i> Buttons</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/social-buttons']\"><i class=\"icon-puzzle\"></i> Social Buttons</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/cards']\"><i class=\"icon-puzzle\"></i> Cards</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/forms']\"><i class=\"icon-puzzle\"></i> Forms</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/modals']\"><i class=\"icon-puzzle\"></i> Modals</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/switches']\"><i class=\"icon-puzzle\"></i> Switches</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/tables']\"><i class=\"icon-puzzle\"></i> Tables</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/tabs']\"><i class=\"icon-puzzle\"></i> Tabs</a>\n          </li>\n        </ul>\n      </li>\n      <li class=\"nav-item nav-dropdown\" routerLinkActive=\"open\" appNavDropdown>\n        <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-star\"></i> Icons</a>\n        <ul class=\"nav-dropdown-items\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/icons/font-awesome']\"><i class=\"icon-star\"></i> Font Awesome<span class=\"badge badge-secondary\">4.7</span></a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/icons/simple-line-icons']\"><i class=\"icon-star\"></i> Simple Line Icons</a>\n          </li>\n        </ul>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/widgets']\"><i class=\"icon-calculator\"></i> Widgets <span class=\"badge badge-info\">NEW</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/charts']\"><i class=\"icon-pie-chart\"></i> Charts</a>\n      </li>\n      <li class=\"divider\"></li>\n      <li class=\"nav-title\">\n        Extras\n      </li>\n      <li class=\"nav-item nav-dropdown\" appNavDropdown>\n        <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-star\"></i> Pages</a>\n        <ul class=\"nav-dropdown-items\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/login']\"><i class=\"icon-star\"></i> Login</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/register']\"><i class=\"icon-star\"></i> Register</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/404']\"><i class=\"icon-star\"></i> Error 404</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/500']\"><i class=\"icon-star\"></i> Error 500</a>\n          </li>\n        </ul>\n      </li>\n      <li class=\"nav-item mt-auto\">\n        <a class=\"nav-link nav-link-success\" href=\"http://coreui.io/angular/\"><i class=\"icon-cloud-download\"></i> Download CoreUI</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link nav-link-danger\" href=\"http://coreui.io/pro/angular/\"><i class=\"icon-layers\"></i> Try CoreUI <strong>PRO</strong></a>\n      </li>\n    </ul>\n  </nav>\n  <app-sidebar-footer></app-sidebar-footer>\n  <app-sidebar-minimizer></app-sidebar-minimizer>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar/app-sidebar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSidebar; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AppSidebar = (function () {
+    function AppSidebar(el) {
+        this.el = el;
+    }
+    //wait for the component to render completely
+    AppSidebar.prototype.ngOnInit = function () {
+        var nativeElement = this.el.nativeElement, parentElement = nativeElement.parentElement;
+        // move all children out of the element
+        while (nativeElement.firstChild) {
+            parentElement.insertBefore(nativeElement.firstChild, nativeElement);
+        }
+        // remove the empty element(the host)
+        parentElement.removeChild(nativeElement);
+    };
+    return AppSidebar;
+}());
+AppSidebar = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-sidebar',
+        template: __webpack_require__("../../../../../src/app/components/app-sidebar/app-sidebar.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+], AppSidebar);
+
+var _a;
+//# sourceMappingURL=app-sidebar.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/app-sidebar/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_sidebar_component__ = __webpack_require__("../../../../../src/app/components/app-sidebar/app-sidebar.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_sidebar_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_aside__ = __webpack_require__("../../../../../src/app/components/app-aside/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_aside__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_breadcrumbs__ = __webpack_require__("../../../../../src/app/components/app-breadcrumbs/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__app_breadcrumbs__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_footer__ = __webpack_require__("../../../../../src/app/components/app-footer/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__app_footer__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_header__ = __webpack_require__("../../../../../src/app/components/app-header/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__app_header__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_sidebar__ = __webpack_require__("../../../../../src/app/components/app-sidebar/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__app_sidebar__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_sidebar_footer__ = __webpack_require__("../../../../../src/app/components/app-sidebar-footer/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_5__app_sidebar_footer__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_sidebar_form__ = __webpack_require__("../../../../../src/app/components/app-sidebar-form/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_6__app_sidebar_form__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_sidebar_header__ = __webpack_require__("../../../../../src/app/components/app-sidebar-header/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_7__app_sidebar_header__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_sidebar_minimizer__ = __webpack_require__("../../../../../src/app/components/app-sidebar-minimizer/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_8__app_sidebar_minimizer__["a"]; });
+
+
+
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/containers/full-layout/full-layout.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-header></app-header>\n<div class=\"app-body\">\n  <app-sidebar></app-sidebar>\n  <!-- Main content -->\n  <main class=\"main\">\n    <!-- Breadcrumb -->\n    <ol class=\"breadcrumb\">\n      <app-breadcrumbs></app-breadcrumbs>\n      <!-- Breadcrumb Menu-->\n      <li class=\"breadcrumb-menu d-md-down-none\">\n        <div class=\"btn-group\" role=\"group\" aria-label=\"Button group with nested dropdown\">\n          <a class=\"btn\" href=\"#\"><i class=\"icon-speech\"></i></a>\n          <a class=\"btn\" [routerLink]=\"['/dashboard']\"><i class=\"icon-graph\"></i> &nbsp;Dashboard</a>\n          <a class=\"btn\" href=\"#\"><i class=\"icon-settings\"></i> &nbsp;Settings</a>\n        </div>\n      </li>\n    </ol>\n    <div class=\"container-fluid\">\n      <router-outlet></router-outlet>\n    </div><!-- /.conainer-fluid -->\n  </main>\n  <app-aside></app-aside>\n</div>\n<app-footer></app-footer>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/containers/full-layout/full-layout.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FullLayout; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var FullLayout = (function () {
+    function FullLayout() {
+    }
+    // public disabled = false;
+    // public status: {isopen: boolean} = {isopen: false};
+    //
+    // public toggled(open: boolean): void {
+    //   console.log('Dropdown is now: ', open);
+    // }
+    //
+    // public toggleDropdown($event: MouseEvent): void {
+    //   $event.preventDefault();
+    //   $event.stopPropagation();
+    //   this.status.isopen = !this.status.isopen;
+    // }
+    FullLayout.prototype.ngOnInit = function () { };
+    return FullLayout;
+}());
+FullLayout = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-dashboard',
+        template: __webpack_require__("../../../../../src/app/containers/full-layout/full-layout.component.html")
+    })
+], FullLayout);
+
+//# sourceMappingURL=full-layout.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/containers/full-layout/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__full_layout_component__ = __webpack_require__("../../../../../src/app/containers/full-layout/full-layout.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__full_layout_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/containers/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__full_layout__ = __webpack_require__("../../../../../src/app/containers/full-layout/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__full_layout__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__simple_layout__ = __webpack_require__("../../../../../src/app/containers/simple-layout/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__simple_layout__["a"]; });
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/containers/simple-layout/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__simple_layout_component__ = __webpack_require__("../../../../../src/app/containers/simple-layout/simple-layout.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__simple_layout_component__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/containers/simple-layout/simple-layout.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleLayout; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SimpleLayout = (function () {
+    function SimpleLayout() {
+    }
+    SimpleLayout.prototype.ngOnInit = function () { };
+    return SimpleLayout;
+}());
+SimpleLayout = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-dashboard',
         template: '<router-outlet></router-outlet>',
     }),
     __metadata("design:paramtypes", [])
-], SimpleLayoutComponent);
+], SimpleLayout);
 
 //# sourceMappingURL=simple-layout.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/shared/aside.directive.ts":
+/***/ "../../../../../src/app/directives/aside/aside.directive.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -364,68 +1022,46 @@ AsideToggleDirective = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/shared/breadcrumb.component.ts":
+/***/ "../../../../../src/app/directives/aside/index.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BreadcrumbsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter__ = __webpack_require__("../../../../rxjs/add/operator/filter.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__aside_directive__ = __webpack_require__("../../../../../src/app/directives/aside/aside.directive.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__aside_directive__["a"]; });
 
-
-
-var BreadcrumbsComponent = (function () {
-    function BreadcrumbsComponent(router, route) {
-        var _this = this;
-        this.router = router;
-        this.route = route;
-        this.router.events.filter(function (event) { return event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* NavigationEnd */]; }).subscribe(function (event) {
-            _this.breadcrumbs = [];
-            var currentRoute = _this.route.root, url = '';
-            do {
-                var childrenRoutes = currentRoute.children;
-                currentRoute = null;
-                childrenRoutes.forEach(function (route) {
-                    if (route.outlet === 'primary') {
-                        var routeSnapshot = route.snapshot;
-                        url += '/' + routeSnapshot.url.map(function (segment) { return segment.path; }).join('/');
-                        _this.breadcrumbs.push({
-                            label: route.snapshot.data,
-                            url: url
-                        });
-                        currentRoute = route;
-                    }
-                });
-            } while (currentRoute);
-        });
-    }
-    return BreadcrumbsComponent;
-}());
-BreadcrumbsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-breadcrumbs',
-        template: "\n  <ng-template ngFor let-breadcrumb [ngForOf]=\"breadcrumbs\" let-last = last>\n    <li class=\"breadcrumb-item\"\n        *ngIf=\"breadcrumb.label.title&&breadcrumb.url.substring(breadcrumb.url.length-1) == '/'||breadcrumb.label.title&&last\"\n        [ngClass]=\"{active: last}\">\n      <a *ngIf=\"!last\" [routerLink]=\"breadcrumb.url\">{{breadcrumb.label.title}}</a>\n      <span *ngIf=\"last\" [routerLink]=\"breadcrumb.url\">{{breadcrumb.label.title}}</span>\n    </li>\n  </ng-template>"
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object])
-], BreadcrumbsComponent);
-
-var _a, _b;
-//# sourceMappingURL=breadcrumb.component.js.map
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/shared/nav-dropdown.directive.ts":
+/***/ "../../../../../src/app/directives/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__aside__ = __webpack_require__("../../../../../src/app/directives/aside/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__aside__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nav_dropdown__ = __webpack_require__("../../../../../src/app/directives/nav-dropdown/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__nav_dropdown__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sidebar__ = __webpack_require__("../../../../../src/app/directives/sidebar/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__sidebar__["a"]; });
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/directives/nav-dropdown/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nav_dropdown_directive__ = __webpack_require__("../../../../../src/app/directives/nav-dropdown/nav-dropdown.directive.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__nav_dropdown_directive__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/directives/nav-dropdown/nav-dropdown.directive.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -491,12 +1127,24 @@ var _a;
 
 /***/ }),
 
-/***/ "../../../../../src/app/shared/sidebar.directive.ts":
+/***/ "../../../../../src/app/directives/sidebar/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sidebar_directive__ = __webpack_require__("../../../../../src/app/directives/sidebar/sidebar.directive.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__sidebar_directive__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/directives/sidebar/sidebar.directive.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export SidebarToggleDirective */
 /* unused harmony export SidebarMinimizeDirective */
+/* unused harmony export BrandMinimizeDirective */
 /* unused harmony export MobileSidebarToggleDirective */
 /* unused harmony export SidebarOffCanvasCloseDirective */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SIDEBAR_TOGGLE_DIRECTIVES; });
@@ -557,6 +1205,28 @@ SidebarMinimizeDirective = __decorate([
     }),
     __metadata("design:paramtypes", [])
 ], SidebarMinimizeDirective);
+
+var BrandMinimizeDirective = (function () {
+    function BrandMinimizeDirective() {
+    }
+    BrandMinimizeDirective.prototype.toggleOpen = function ($event) {
+        $event.preventDefault();
+        document.querySelector('body').classList.toggle('brand-minimized');
+    };
+    return BrandMinimizeDirective;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('click', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], BrandMinimizeDirective.prototype, "toggleOpen", null);
+BrandMinimizeDirective = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+        selector: '[appBrandMinimizer]'
+    }),
+    __metadata("design:paramtypes", [])
+], BrandMinimizeDirective);
 
 var MobileSidebarToggleDirective = (function () {
     function MobileSidebarToggleDirective() {
@@ -631,6 +1301,7 @@ SidebarOffCanvasCloseDirective = __decorate([
 var SIDEBAR_TOGGLE_DIRECTIVES = [
     SidebarToggleDirective,
     SidebarMinimizeDirective,
+    BrandMinimizeDirective,
     SidebarOffCanvasCloseDirective,
     MobileSidebarToggleDirective
 ];
