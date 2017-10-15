@@ -1,0 +1,10 @@
+E:\Code\GigHub\LearnToExcelDev\bin\Debug\netcoreapp2.0\LearnToExcelDev.deps.json
+E:\Code\GigHub\LearnToExcelDev\bin\Debug\netcoreapp2.0\LearnToExcelDev.runtimeconfig.json
+E:\Code\GigHub\LearnToExcelDev\bin\Debug\netcoreapp2.0\LearnToExcelDev.runtimeconfig.dev.json
+E:\Code\GigHub\LearnToExcelDev\bin\Debug\netcoreapp2.0\LearnToExcelDev.dll
+E:\Code\GigHub\LearnToExcelDev\bin\Debug\netcoreapp2.0\LearnToExcelDev.pdb
+E:\Code\GigHub\LearnToExcelDev\obj\Debug\netcoreapp2.0\LearnToExcelDev.csproj.CoreCompileInputs.cache
+E:\Code\GigHub\LearnToExcelDev\obj\Debug\netcoreapp2.0\LearnToExcelDev.AssemblyInfoInputs.cache
+E:\Code\GigHub\LearnToExcelDev\obj\Debug\netcoreapp2.0\LearnToExcelDev.AssemblyInfo.cs
+E:\Code\GigHub\LearnToExcelDev\obj\Debug\netcoreapp2.0\LearnToExcelDev.dll
+E:\Code\GigHub\LearnToExcelDev\obj\Debug\netcoreapp2.0\LearnToExcelDev.pdb
