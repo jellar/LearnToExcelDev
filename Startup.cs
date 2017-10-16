@@ -65,6 +65,8 @@ namespace LearnToExcelDev
                     };
                 });
           services.AddMvc();
+           // Add Database Initializer
+          services.AddTransient<IDbInitializer, DbInitializer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
