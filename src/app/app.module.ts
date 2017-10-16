@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
+import { AuthService } from './auth/auth.service';
+import { AuthHttpService } from './auth/auth-http.service';
+import { AuthGuard} from './auth/auth.guard';
 import { AppComponent } from './app.component';
 
 // Import containers
@@ -75,7 +77,9 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     ...APP_COMPONENTS,
     ...APP_DIRECTIVES
   ],
-  providers: [{
+  providers: [
+     AuthGuard, AuthHttpService, AuthGuard,
+    {
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],

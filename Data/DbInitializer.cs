@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LearnToExcel.Models;
+using LearnToExcelDev.Data;
+using LearnToExcelDev.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace LearnToExcel.Data
+namespace LearnToExcelDev.Data
 {
     public interface IDbInitializer
     {
@@ -110,6 +111,6 @@ namespace LearnToExcel.Data
 
             return applicationUser;
         }
-        
+
     }
 }
