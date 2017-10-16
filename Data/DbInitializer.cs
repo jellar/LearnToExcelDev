@@ -1,13 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LearnToExcelDev.Models;
+using LearnToExcel.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace LearnToExcelDev.Data
+namespace LearnToExcel.Data
 {
     public interface IDbInitializer
     {
-        void Initialize();
+        Task Initialize();
 
     }
     public class DbInitializer : IDbInitializer
@@ -37,42 +39,24 @@ namespace LearnToExcelDev.Data
             _roleManager = roleManager;
 
         }
-        public async void Initialize()
+        public async Task Initialize()
         {
             // create database schema if none exists
-
-                _context.Database.EnsureCreated();
+            await _context.Database.EnsureCreatedAsync();
 
             // seed roles and admin user
-            var roles = new[] { "Administrator", "Parent", "Student" };
-            foreach (var role in roles)
-            {
-                if (!_context.Roles.Any(r => r.Name == role))
-                {
-                    _context.Roles.Add(new IdentityRole(role));
-                   //await _roleManager.CreateAsync(new IdentityRole(role));
-                }
-            }
-            _context.SaveChanges();
+            const string adminRoleName = "administrator";
+            const string parentRoleName = "parent";
+            const string studentRoleName = "student";
+
+            await EnsureRoleAsync(adminRoleName);
+            await EnsureRoleAsync(parentRoleName);
+            await EnsureRoleAsync(studentRoleName);
+
+            await CreateUserAsync("admin@learntoexcel.co.uk", "admin@learntoexcel.co.uk", adminRoleName);
             //await CreateAdminAccount(_context);
 
-            await InitializeCourses(_context);
-        }
-
-        public async Task CreateAdminAccount(ApplicationDbContext context)
-        {
-            const string user = "admin@learntoexcel.co.uk";
-            const string password = "Chang3m3.";
-
-            await _userManager.CreateAsync(new ApplicationUser() { UserName = user, Email = user, EmailConfirmed = true },
-                password);
-
-            await _userManager.AddToRoleAsync(await _userManager.FindByNameAsync(user), "Administrator");
-        }
-
-        public async Task InitializeCourses(ApplicationDbContext context)
-        {
-            if (context.Courses.Any())
+            if (_context.Courses.Any())
             {
                 return;
             }
@@ -85,9 +69,47 @@ namespace LearnToExcelDev.Data
 
             foreach (Course couse in courses)
             {
-                context.Courses.Add(couse);
+                _context.Courses.Add(couse);
             }
-            await context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
+
+        private async Task EnsureRoleAsync(string roleName)
+        {
+            if (await _roleManager.GetRoleNameAsync(new IdentityRole(roleName)) == null)
+            {
+                IdentityRole role = new IdentityRole(roleName);
+
+                var result = await _roleManager.CreateAsync(role);
+
+                if (!result.Succeeded)
+                    throw new Exception($"Seeding \"{roleName}\" role failed. Errors: {string.Join(Environment.NewLine, result.Errors)}");
+            }
+        }
+
+        private async Task<ApplicationUser> CreateUserAsync(string userName, string email, string role)
+        {
+            ApplicationUser applicationUser = new ApplicationUser
+            {
+                UserName = userName,
+                Email = email,
+                EmailConfirmed = true
+            };
+            const string password = "Chang3m3.";
+
+            var result = await _userManager.CreateAsync(applicationUser, password);
+
+            if (result.Succeeded)
+            {
+                var resultRole = await _userManager.AddToRoleAsync(applicationUser, role);
+                if (!resultRole.Succeeded)
+                {
+                    throw new Exception($"Seeding \"{userName}\" user failed. Errors: {string.Join(Environment.NewLine, resultRole.Errors)}");
+                }
+            }
+
+            return applicationUser;
+        }
+        
     }
 }
