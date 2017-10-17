@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Http, Headers, RequestOptions, URLSearchParams } from '@angular/http';
 import { environment } from '../../environments/environment';
 import { tokenNotExpired, JwtHelper, AuthHttp } from 'angular2-jwt';
-import { Subject, Observable } from 'rxjs';
+import { Subject, Observable } from 'rxjs/Rx';
 import { NgProgressService } from 'ngx-progressbar';
 @Injectable()
 export class AuthService {
@@ -19,7 +19,7 @@ export class AuthService {
     this.requireLoginSubject = new Subject<boolean>();
     this.tokenIsBeingRefreshed = new Subject<boolean>();
     this.tokenIsBeingRefreshed.next(false);
-    this.lastUrl = '/home';
+    this.lastUrl = '/dashboard';
   }
 
   isUserAuthenticated() {
@@ -39,7 +39,7 @@ export class AuthService {
     const body = new URLSearchParams();
     body.set('email', username);
     body.set('password', password);
-    body.set('grant_type', 'password');
+    // body.set('grant_type', 'password');
 
     return this.http.post(this.tokenEndpoint, body, options)
                     .map(response => {
@@ -72,7 +72,7 @@ export class AuthService {
         const token = data.response.json() && data.response.json().access_token;
         if (token) {
             // set token property
-            this.addTokens(data.response.json().access_token, data.response.json().refresh_token)
+            this.addTokens(data.response.json().access_token, data.response.json().refresh_token);
             localStorage.setItem('currentUser', JSON.stringify({username: 'username', token: token}));
             this.progress.done();
             return true;

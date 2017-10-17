@@ -82,18 +82,22 @@ AppComponent = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__auth_auth_http_service__ = __webpack_require__("../../../../../src/app/auth/auth-http.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__auth_auth_guard__ = __webpack_require__("../../../../../src/app/auth/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__containers__ = __webpack_require__("../../../../../src/app/containers/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components__ = __webpack_require__("../../../../../src/app/components/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives__ = __webpack_require__("../../../../../src/app/directives/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_dropdown__ = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_tabs__ = __webpack_require__("../../../../ngx-bootstrap/tabs/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ng2_charts_ng2_charts__ = __webpack_require__("../../../../ng2-charts/ng2-charts.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ng2_charts_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_ng2_charts_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__auth_auth_http_service__ = __webpack_require__("../../../../../src/app/auth/auth-http.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__auth_auth_guard__ = __webpack_require__("../../../../../src/app/auth/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_progressbar__ = __webpack_require__("../../../../ngx-progressbar/modules/ngx-progressbar.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__containers__ = __webpack_require__("../../../../../src/app/containers/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components__ = __webpack_require__("../../../../../src/app/components/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__directives__ = __webpack_require__("../../../../../src/app/directives/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ngx_bootstrap_dropdown__ = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ngx_bootstrap_tabs__ = __webpack_require__("../../../../ngx-bootstrap/tabs/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng2_charts_ng2_charts__ = __webpack_require__("../../../../ng2-charts/ng2-charts.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng2_charts_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_ng2_charts_ng2_charts__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -106,31 +110,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
 // Import containers
 
 var APP_CONTAINERS = [
-    __WEBPACK_IMPORTED_MODULE_6__containers__["a" /* FullLayout */],
-    __WEBPACK_IMPORTED_MODULE_6__containers__["b" /* SimpleLayout */]
+    __WEBPACK_IMPORTED_MODULE_10__containers__["a" /* FullLayout */],
+    __WEBPACK_IMPORTED_MODULE_10__containers__["b" /* SimpleLayout */]
 ];
 // Import components
 
 var APP_COMPONENTS = [
-    __WEBPACK_IMPORTED_MODULE_7__components__["a" /* AppAside */],
-    __WEBPACK_IMPORTED_MODULE_7__components__["b" /* AppBreadcrumbs */],
-    __WEBPACK_IMPORTED_MODULE_7__components__["c" /* AppFooter */],
-    __WEBPACK_IMPORTED_MODULE_7__components__["d" /* AppHeader */],
-    __WEBPACK_IMPORTED_MODULE_7__components__["e" /* AppSidebar */],
-    __WEBPACK_IMPORTED_MODULE_7__components__["f" /* AppSidebarFooter */],
-    __WEBPACK_IMPORTED_MODULE_7__components__["g" /* AppSidebarForm */],
-    __WEBPACK_IMPORTED_MODULE_7__components__["h" /* AppSidebarHeader */],
-    __WEBPACK_IMPORTED_MODULE_7__components__["i" /* AppSidebarMinimizer */]
+    __WEBPACK_IMPORTED_MODULE_11__components__["a" /* AppAside */],
+    __WEBPACK_IMPORTED_MODULE_11__components__["b" /* AppBreadcrumbs */],
+    __WEBPACK_IMPORTED_MODULE_11__components__["c" /* AppFooter */],
+    __WEBPACK_IMPORTED_MODULE_11__components__["d" /* AppHeader */],
+    __WEBPACK_IMPORTED_MODULE_11__components__["e" /* AppSidebar */],
+    __WEBPACK_IMPORTED_MODULE_11__components__["f" /* AppSidebarFooter */],
+    __WEBPACK_IMPORTED_MODULE_11__components__["g" /* AppSidebarForm */],
+    __WEBPACK_IMPORTED_MODULE_11__components__["h" /* AppSidebarHeader */],
+    __WEBPACK_IMPORTED_MODULE_11__components__["i" /* AppSidebarMinimizer */]
 ];
 // Import directives
 
 var APP_DIRECTIVES = [
-    __WEBPACK_IMPORTED_MODULE_8__directives__["a" /* AsideToggleDirective */],
-    __WEBPACK_IMPORTED_MODULE_8__directives__["b" /* NAV_DROPDOWN_DIRECTIVES */],
-    __WEBPACK_IMPORTED_MODULE_8__directives__["c" /* SIDEBAR_TOGGLE_DIRECTIVES */]
+    __WEBPACK_IMPORTED_MODULE_12__directives__["a" /* AsideToggleDirective */],
+    __WEBPACK_IMPORTED_MODULE_12__directives__["b" /* NAV_DROPDOWN_DIRECTIVES */],
+    __WEBPACK_IMPORTED_MODULE_12__directives__["c" /* SIDEBAR_TOGGLE_DIRECTIVES */]
 ];
 // Import routing module
 
@@ -147,22 +155,26 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_9__app_routing__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_tabs__["a" /* TabsModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_12_ng2_charts_ng2_charts__["ChartsModule"]
+            __WEBPACK_IMPORTED_MODULE_13__app_routing__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_14_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_15_ngx_bootstrap_tabs__["a" /* TabsModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_16_ng2_charts_ng2_charts__["ChartsModule"],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["HttpModule"],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* ReactiveFormsModule */]
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]
         ].concat(APP_CONTAINERS, APP_COMPONENTS, APP_DIRECTIVES),
         providers: [
-            __WEBPACK_IMPORTED_MODULE_4__auth_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_3__auth_auth_http_service__["a" /* AuthHttpService */], __WEBPACK_IMPORTED_MODULE_4__auth_auth_guard__["a" /* AuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_5__auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_6__auth_auth_http_service__["a" /* AuthHttpService */], __WEBPACK_IMPORTED_MODULE_7__auth_auth_guard__["a" /* AuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_9_ngx_progressbar__["a" /* NgProgressService */],
             {
-                provide: __WEBPACK_IMPORTED_MODULE_2__angular_common__["g" /* LocationStrategy */],
-                useClass: __WEBPACK_IMPORTED_MODULE_2__angular_common__["d" /* HashLocationStrategy */]
+                provide: __WEBPACK_IMPORTED_MODULE_4__angular_common__["g" /* LocationStrategy */],
+                useClass: __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* HashLocationStrategy */]
             }
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -195,8 +207,7 @@ var routes = [
     {
         path: '',
         redirectTo: 'dashboard',
-        pathMatch: 'full',
-        canActivate: [__WEBPACK_IMPORTED_MODULE_2__auth_auth_guard__["a" /* AuthGuard */]]
+        pathMatch: 'full'
     },
     {
         path: '',
@@ -204,6 +215,7 @@ var routes = [
         data: {
             title: 'Home'
         },
+        canActivate: [__WEBPACK_IMPORTED_MODULE_2__auth_auth_guard__["a" /* AuthGuard */]],
         children: [
             {
                 path: 'dashboard',
@@ -423,8 +435,8 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_progressbar__ = __webpack_require__("../../../../ngx-progressbar/modules/ngx-progressbar.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -448,10 +460,10 @@ var AuthService = (function () {
         this.progress = progress;
         this.tokenEndpoint = 'account/generateToken';
         this.jwtHelper = new __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["JwtHelper"]();
-        this.requireLoginSubject = new __WEBPACK_IMPORTED_MODULE_4_rxjs__["Subject"]();
-        this.tokenIsBeingRefreshed = new __WEBPACK_IMPORTED_MODULE_4_rxjs__["Subject"]();
+        this.requireLoginSubject = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Subject"]();
+        this.tokenIsBeingRefreshed = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Subject"]();
         this.tokenIsBeingRefreshed.next(false);
-        this.lastUrl = '/home';
+        this.lastUrl = '/dashboard';
     }
     AuthService.prototype.isUserAuthenticated = function () {
         console.log('test');
@@ -471,7 +483,7 @@ var AuthService = (function () {
         var body = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["URLSearchParams"]();
         body.set('email', username);
         body.set('password', password);
-        body.set('grant_type', 'password');
+        // body.set('grant_type', 'password');
         return this.http.post(this.tokenEndpoint, body, options)
             .map(function (response) {
             // login successful if there's a jwt token in the response
@@ -493,7 +505,7 @@ var AuthService = (function () {
             }
         }).catch(function (e) {
             _this.progress.done();
-            return __WEBPACK_IMPORTED_MODULE_4_rxjs__["Observable"].throw(new Error(e.status + " " + e.statusText));
+            return __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Observable"].throw(new Error(e.status + " " + e.statusText));
         });
     };
     AuthService.prototype.StoreToken = function (data) {
@@ -524,7 +536,7 @@ var AuthService = (function () {
         else {
             errMessage = err.message ? err.message : err.toString();
         }
-        return __WEBPACK_IMPORTED_MODULE_4_rxjs__["Observable"].throw(errMessage);
+        return __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Observable"].throw(errMessage);
     };
     AuthService.prototype.loggedIn = function () {
         return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');

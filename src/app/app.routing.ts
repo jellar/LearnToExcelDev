@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule , CanActivate } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 // Import Containers
 import {
@@ -11,8 +11,7 @@ export const routes: Routes = [
   {
     path: '',
     redirectTo: 'dashboard',
-    pathMatch: 'full',
-    canActivate: [AuthGuard]
+    pathMatch: 'full'
   },
   {
     path: '',
@@ -20,6 +19,7 @@ export const routes: Routes = [
     data: {
       title: 'Home'
     },
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'dashboard',

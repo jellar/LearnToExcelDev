@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AuthService } from './auth/auth.service';
 import { AuthHttpService } from './auth/auth-http.service';
 import { AuthGuard} from './auth/auth.guard';
 import { AppComponent } from './app.component';
-
+import { NgProgressService } from 'ngx-progressbar';
 // Import containers
 import {
   FullLayout,
@@ -15,7 +17,7 @@ import {
 const APP_CONTAINERS = [
   FullLayout,
   SimpleLayout
-]
+];
 
 // Import components
 import {
@@ -40,7 +42,7 @@ const APP_COMPONENTS = [
   AppSidebarForm,
   AppSidebarHeader,
   AppSidebarMinimizer
-]
+];
 
 // Import directives
 import {
@@ -53,7 +55,7 @@ const APP_DIRECTIVES = [
   AsideToggleDirective,
   NAV_DROPDOWN_DIRECTIVES,
   SIDEBAR_TOGGLE_DIRECTIVES
-]
+];
 
 // Import routing module
 import { AppRoutingModule } from './app.routing';
@@ -69,7 +71,10 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
@@ -78,7 +83,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     ...APP_DIRECTIVES
   ],
   providers: [
-     AuthGuard, AuthHttpService, AuthGuard,
+     AuthService, AuthHttpService, AuthGuard,
+     NgProgressService,
     {
     provide: LocationStrategy,
     useClass: HashLocationStrategy

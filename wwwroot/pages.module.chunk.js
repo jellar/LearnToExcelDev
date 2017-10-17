@@ -81,7 +81,7 @@ P500Component = __decorate([
 /***/ "../../../../../src/app/views/pages/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app flex-row align-items-center\">\n  <div class=\"container\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-md-8\">\n        <div class=\"card-group mb-0\">\n          <div class=\"card p-4\">\n            <div class=\"card-body\">\n              <h1>Login</h1>\n              <p class=\"text-muted\">Sign In to your account</p>\n              <div class=\"input-group mb-3\">\n                <span class=\"input-group-addon\"><i class=\"icon-user\"></i></span>\n                <input type=\"text\" class=\"form-control\" placeholder=\"Username\">\n              </div>\n              <div class=\"input-group mb-4\">\n                <span class=\"input-group-addon\"><i class=\"icon-lock\"></i></span>\n                <input type=\"password\" class=\"form-control\" placeholder=\"Password\">\n              </div>\n              <div class=\"row\">\n                <div class=\"col-6\">\n                  <button type=\"button\" class=\"btn btn-primary px-4\" (click)=\"login()\">Login</button>\n                </div>\n                <div class=\"col-6 text-right\">\n                  <button type=\"button\" class=\"btn btn-link px-0\">Forgot password?</button>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"card text-white bg-primary py-5 d-md-down-none\" style=\"width:44%\">\n            <div class=\"card-body text-center\">\n              <div>\n                <h2>Sign up</h2>\n                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n                <button type=\"button\" class=\"btn btn-primary active mt-3\">Register Now!</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"app flex-row align-items-center\">\n  <div class=\"container\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-md-8\">\n        <div class=\"card-group mb-0\">\n          <div class=\"card p-4\">\n            <div class=\"card-body\">\n              <h1>Login</h1>\n              <p class=\"text-muted\">Sign In to your account</p>\n              <div class=\"input-group mb-3\">\n                <span class=\"input-group-addon\"><i class=\"icon-user\"></i></span>\n                <input type=\"text\" class=\"form-control\" placeholder=\"Username\" name=\"email\" required>\n              </div>\n              <div class=\"input-group mb-4\">\n                <span class=\"input-group-addon\"><i class=\"icon-lock\"></i></span>\n                <input type=\"password\" class=\"form-control\" placeholder=\"Password\" name=\"password\" required>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-primary px-4\" (click)=\"login()\">Login</button>\n                </div>\n                <div class=\"col-6 text-right\">\n                  <button type=\"button\" class=\"btn btn-link px-0\">Forgot password?</button>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"card text-white bg-primary py-5 d-md-down-none\" style=\"width:44%\">\n            <div class=\"card-body text-center\">\n              <div>\n                <h2>Sign up</h2>\n                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n                <button type=\"button\" class=\"btn btn-primary active mt-3\">Register Now!</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -91,6 +91,7 @@ module.exports = "<div class=\"app flex-row align-items-center\">\n  <div class=
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -101,11 +102,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var LoginComponent = (function () {
-    function LoginComponent() {
+    function LoginComponent(auth) {
+        this.auth = auth;
+        this.model = {};
     }
     LoginComponent.prototype.login = function () {
-        alert('test');
+        this.auth.login('admin@learntoexcel.co.uk', 'Chang3m3.').subscribe(function (user) {
+            console.log(user.json());
+        }, function (err) {
+            console.log(err);
+        });
     };
     return LoginComponent;
 }());
@@ -113,9 +121,10 @@ LoginComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/views/pages/login.component.html")
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__auth_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__auth_auth_service__["a" /* AuthService */]) === "function" && _a || Object])
 ], LoginComponent);
 
+var _a;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),

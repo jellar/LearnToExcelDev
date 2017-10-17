@@ -12539,11 +12539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Code\\GigHub\\LearnToExcelDev\\LearnToExcelDev.csproj",
+      "projectUniqueName": "e:\\Code\\GigHub\\LearnToExcelDev\\LearnToExcelDev.csproj",
       "projectName": "LearnToExcelDev",
-      "projectPath": "E:\\Code\\GigHub\\LearnToExcelDev\\LearnToExcelDev.csproj",
+      "projectPath": "e:\\Code\\GigHub\\LearnToExcelDev\\LearnToExcelDev.csproj",
       "packagesPath": "C:\\Users\\Rajesh\\.nuget\\packages\\",
-      "outputPath": "E:\\Code\\GigHub\\LearnToExcelDev\\obj\\",
+      "outputPath": "e:\\Code\\GigHub\\LearnToExcelDev\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

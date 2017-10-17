@@ -77,7 +77,7 @@ namespace LearnToExcelDev.Data
 
         private async Task EnsureRoleAsync(string roleName)
         {
-            if (await _roleManager.GetRoleNameAsync(new IdentityRole(roleName)) == null)
+            if (_roleManager.FindByNameAsync(roleName) == null)
             {
                 IdentityRole role = new IdentityRole(roleName);
 
