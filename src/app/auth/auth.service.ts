@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Http, Headers, RequestOptions, URLSearchParams } from '@angular/http';
+import { Http, Headers, RequestOptions, URLSearchParams, Response } from '@angular/http';
 import { environment } from '../../environments/environment';
 import { tokenNotExpired, JwtHelper, AuthHttp } from 'angular2-jwt';
-import { Subject, Observable } from 'rxjs/Rx';
+import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 import { NgProgressService } from 'ngx-progressbar';
 @Injectable()
 export class AuthService {
 
-  tokenEndpoint = 'account/generateToken';
+  tokenEndpoint = 'api/account/generateToken';
   requireLoginSubject: Subject<boolean>;
   tokenIsBeingRefreshed: Subject<boolean>;
   lastUrl: string;
@@ -23,11 +25,13 @@ export class AuthService {
   }
 
   isUserAuthenticated() {
-    console.log('test');
+    console.log('login check');
     if (this.loggedIn()) {
-      this.requireLoginSubject.next(false);
+        console.log('logged In');
+       this.requireLoginSubject.next(false);
       return true;
     } else {
+      console.log('NOT logged In');
       return false;
     }
   }
@@ -42,25 +46,17 @@ export class AuthService {
     // body.set('grant_type', 'password');
 
     return this.http.post(this.tokenEndpoint, body, options)
-                    .map(response => {
-                // login successful if there's a jwt token in the response
-                const token = response.json() && response.json().access_token;
-                if (token) {
-                    // set token property
-                    this.addTokens(response.json().access_token, response.json().refresh_token);
-                    // store username and jwt token in local storage to keep user logged
-                    // in between page refreshes
-                    localStorage.setItem('currentUser', JSON.stringify({username: username, token: token}));
-                    this.progress.done();
-                    // return true to indicate successful login
+            .map(response => {
+              const user = response.json();
+              const token = response.json() && response.json().token;
+              if (token) {
+                   this.addTokens(response.json().token, response.json().token);
+                  localStorage.setItem('currentUser', JSON.stringify({username: username, token: token}));
                     return true;
-                }else {
-                    // return false to indicare failed login
-                    this.progress.done();
-                    return false;
-                }
+                  }else {
+                  return false;
+            }
             }).catch((e) => {
-               this.progress.done();
                return Observable.throw(
                 new Error(`${ e.status } ${ e.statusText }`)
               );
@@ -72,7 +68,7 @@ export class AuthService {
         const token = data.response.json() && data.response.json().access_token;
         if (token) {
             // set token property
-            this.addTokens(data.response.json().access_token, data.response.json().refresh_token);
+            this.addTokens(data.response.json().token, data.response.json().token);
             localStorage.setItem('currentUser', JSON.stringify({username: 'username', token: token}));
             this.progress.done();
             return true;
@@ -103,6 +99,7 @@ export class AuthService {
   }
 
   addTokens(accessToken: string, refreshToken: string) {
+    console.log('store token');
     localStorage.setItem('id_token', accessToken);
     localStorage.setItem('refresh_token', refreshToken);
   }

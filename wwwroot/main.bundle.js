@@ -4,28 +4,28 @@ webpackJsonp(["main"],{
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./views/chartjs/chartjs.module": [
-		"../../../../../src/app/views/chartjs/chartjs.module.ts",
+	"./chartjs/chartjs.module": [
+		"../../../../../src/app/chartjs/chartjs.module.ts",
 		"chartjs.module"
 	],
-	"./views/components/components.module": [
-		"../../../../../src/app/views/components/components.module.ts",
+	"./components/components.module": [
+		"../../../../../src/app/components/components.module.ts",
 		"components.module"
 	],
-	"./views/dashboard/dashboard.module": [
-		"../../../../../src/app/views/dashboard/dashboard.module.ts",
+	"./dashboard/dashboard.module": [
+		"../../../../../src/app/dashboard/dashboard.module.ts",
 		"dashboard.module"
 	],
-	"./views/icons/icons.module": [
-		"../../../../../src/app/views/icons/icons.module.ts",
+	"./icons/icons.module": [
+		"../../../../../src/app/icons/icons.module.ts",
 		"icons.module"
 	],
-	"./views/pages/pages.module": [
-		"../../../../../src/app/views/pages/pages.module.ts",
+	"./pages.module": [
+		"../../../../../src/app/pages.module.ts",
 		"pages.module"
 	],
-	"./views/widgets/widgets.module": [
-		"../../../../../src/app/views/widgets/widgets.module.ts",
+	"./widgets/widgets.module": [
+		"../../../../../src/app/widgets/widgets.module.ts",
 		"widgets.module"
 	]
 };
@@ -219,23 +219,23 @@ var routes = [
         children: [
             {
                 path: 'dashboard',
-                loadChildren: './views/dashboard/dashboard.module#DashboardModule'
+                loadChildren: './dashboard/dashboard.module#DashboardModule'
             },
             {
                 path: 'components',
-                loadChildren: './views/components/components.module#ComponentsModule'
+                loadChildren: './components/components.module#ComponentsModule'
             },
             {
                 path: 'icons',
-                loadChildren: './views/icons/icons.module#IconsModule'
+                loadChildren: './icons/icons.module#IconsModule'
             },
             {
                 path: 'widgets',
-                loadChildren: './views/widgets/widgets.module#WidgetsModule'
+                loadChildren: './widgets/widgets.module#WidgetsModule'
             },
             {
                 path: 'charts',
-                loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
+                loadChildren: './chartjs/chartjs.module#ChartJSModule'
             }
         ]
     },
@@ -248,7 +248,7 @@ var routes = [
         children: [
             {
                 path: '',
-                loadChildren: './views/pages/pages.module#PagesModule',
+                loadChildren: './pages.module#PagesModule',
             }
         ]
     }
@@ -435,9 +435,13 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_progressbar__ = __webpack_require__("../../../../ngx-progressbar/modules/ngx-progressbar.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_progressbar__ = __webpack_require__("../../../../ngx-progressbar/modules/ngx-progressbar.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -453,25 +457,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var AuthService = (function () {
     function AuthService(http, router, progress) {
         this.http = http;
         this.router = router;
         this.progress = progress;
-        this.tokenEndpoint = 'account/generateToken';
+        this.tokenEndpoint = 'api/account/generateToken';
         this.jwtHelper = new __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["JwtHelper"]();
-        this.requireLoginSubject = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Subject"]();
-        this.tokenIsBeingRefreshed = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Subject"]();
+        this.requireLoginSubject = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["Subject"]();
+        this.tokenIsBeingRefreshed = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["Subject"]();
         this.tokenIsBeingRefreshed.next(false);
         this.lastUrl = '/dashboard';
     }
     AuthService.prototype.isUserAuthenticated = function () {
-        console.log('test');
+        console.log('login check');
         if (this.loggedIn()) {
+            console.log('logged In');
             this.requireLoginSubject.next(false);
             return true;
         }
         else {
+            console.log('NOT logged In');
             return false;
         }
     };
@@ -486,26 +494,18 @@ var AuthService = (function () {
         // body.set('grant_type', 'password');
         return this.http.post(this.tokenEndpoint, body, options)
             .map(function (response) {
-            // login successful if there's a jwt token in the response
-            var token = response.json() && response.json().access_token;
+            var user = response.json();
+            var token = response.json() && response.json().token;
             if (token) {
-                // set token property
-                _this.addTokens(response.json().access_token, response.json().refresh_token);
-                // store username and jwt token in local storage to keep user logged
-                // in between page refreshes
+                _this.addTokens(response.json().token, response.json().token);
                 localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));
-                _this.progress.done();
-                // return true to indicate successful login
                 return true;
             }
             else {
-                // return false to indicare failed login
-                _this.progress.done();
                 return false;
             }
         }).catch(function (e) {
-            _this.progress.done();
-            return __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Observable"].throw(new Error(e.status + " " + e.statusText));
+            return __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__["Observable"].throw(new Error(e.status + " " + e.statusText));
         });
     };
     AuthService.prototype.StoreToken = function (data) {
@@ -513,7 +513,7 @@ var AuthService = (function () {
         var token = data.response.json() && data.response.json().access_token;
         if (token) {
             // set token property
-            this.addTokens(data.response.json().access_token, data.response.json().refresh_token);
+            this.addTokens(data.response.json().token, data.response.json().token);
             localStorage.setItem('currentUser', JSON.stringify({ username: 'username', token: token }));
             this.progress.done();
             return true;
@@ -528,7 +528,7 @@ var AuthService = (function () {
     AuthService.prototype.handleError = function (err) {
         console.log(err);
         var errMessage;
-        if (err instanceof Response) {
+        if (err instanceof __WEBPACK_IMPORTED_MODULE_2__angular_http__["Response"]) {
             var body = err.json() || '';
             var error = JSON.stringify(body);
             errMessage = err.status + " - " + err.statusText + " || ''} " + error;
@@ -536,12 +536,13 @@ var AuthService = (function () {
         else {
             errMessage = err.message ? err.message : err.toString();
         }
-        return __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__["Observable"].throw(errMessage);
+        return __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__["Observable"].throw(errMessage);
     };
     AuthService.prototype.loggedIn = function () {
         return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
     };
     AuthService.prototype.addTokens = function (accessToken, refreshToken) {
+        console.log('store token');
         localStorage.setItem('id_token', accessToken);
         localStorage.setItem('refresh_token', refreshToken);
     };
@@ -593,7 +594,7 @@ var AuthService = (function () {
 }());
 AuthService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5_ngx_progressbar__["a" /* NgProgressService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ngx_progressbar__["a" /* NgProgressService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_7_ngx_progressbar__["a" /* NgProgressService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7_ngx_progressbar__["a" /* NgProgressService */]) === "function" && _c || Object])
 ], AuthService);
 
 var _a, _b, _c;
@@ -802,7 +803,7 @@ var _a;
 /***/ "../../../../../src/app/components/app-header/app-header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"app-header navbar\">\n  <button class=\"navbar-toggler d-lg-none\" type=\"button\" appMobileSidebarToggler>&#9776;</button>\n  <a class=\"navbar-brand\" href=\"#\"></a>\n  <button class=\"navbar-toggler d-md-down-none\" type=\"button\" appSidebarToggler>&#9776;</button>\n  <ul class=\"nav navbar-nav d-md-down-none\">\n    <li class=\"nav-item px-3\">\n      <a class=\"nav-link\" href=\"#\">Dashboard</a>\n    </li>\n    <li class=\"nav-item px-3\">\n      <a class=\"nav-link\" href=\"#\">Users</a>\n    </li>\n    <li class=\"nav-item px-3\">\n      <a class=\"nav-link\" href=\"#\">Settings</a>\n    </li>\n  </ul>\n  <ul class=\"nav navbar-nav ml-auto\">\n    <li class=\"nav-item dropdown d-md-down-none\" dropdown placement=\"bottom right\">\n      <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n        <i class=\"icon-bell\"></i><span class=\"badge badge-pill badge-danger\">5</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right dropdown-menu-lg\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n        <div class=\"dropdown-header text-center\"><strong>You have 5 notifications</strong></div>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-user-follow text-success\"></i> New user registered\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-user-unfollow text-danger\"></i> User deleted\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-chart text-info\"></i> Sales report is ready\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-basket-loaded text-primary\"></i> New client\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <i class=\"icon-speedometer text-warning\"></i> Server overloaded\n        </a>\n        <div class=\"dropdown-header text-center\"><strong>Server</strong></div>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"text-uppercase mb-1\"><small><b>CPU Usage</b></small></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: 25%\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n          <small class=\"text-muted\">348 Processes. 1/4 Cores.</small>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"text-uppercase mb-1\"><small><b>Memory Usage</b></small></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-warning\" role=\"progressbar\" style=\"width: 70%\" aria-valuenow=\"70\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n          <small class=\"text-muted\">11444GB/16384MB</small>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"text-uppercase mb-1\"><small><b>SSD 1 Usage</b></small></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-danger\" role=\"progressbar\" style=\"width: 95%\" aria-valuenow=\"95\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n          <small class=\"text-muted\">243GB/256GB</small>\n        </a>\n      </div>\n    </li>\n    <li class=\"nav-item dropdown d-md-down-none\" dropdown placement=\"bottom right\">\n      <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n        <i class=\"icon-list\"></i><span class=\"badge badge-pill badge-warning\">15</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right dropdown-menu-lg\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n        <div class=\"dropdown-header text-center\"><strong>You have 5 pending tasks</strong></div>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">Upgrade NPM &amp; Bower <span class=\"float-right\"><strong>0%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: 0%\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">ReactJS Version <span class=\"float-right\"><strong>25%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-danger\" role=\"progressbar\" style=\"width: 25%\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">VueJS Version <span class=\"float-right\"><strong>50%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-warning\" role=\"progressbar\" style=\"width: 50%\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">Add new layouts <span class=\"float-right\"><strong>75%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: 75%\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"small mb-1\">Angular 2 Cli Version <span class=\"float-right\"><strong>100%</strong></span></div>\n          <span class=\"progress progress-xs\">\n            <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 100%\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n          </span>\n        </a>\n        <a href=\"#\" class=\"dropdown-item text-center\">\n          <strong>View all tasks</strong>\n        </a>\n      </div>\n    </li>\n    <li class=\"nav-item dropdown d-md-down-none\" dropdown placement=\"bottom right\">\n      <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n        <i class=\"icon-envelope-letter\"></i><span class=\"badge badge-pill badge-info\">7</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right dropdown-menu-lg\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n        <div class=\"dropdown-header text-center\"><strong>You have 4 messages</strong></div>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"message\">\n            <div class=\"py-3 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/7.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-success\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">John Doe</small>\n              <small class=\"text-muted float-right mt-1\">Just now</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\"><span class=\"fa fa-exclamation text-danger\"></span> Important message</div>\n            <div class=\"small text-muted text-truncate\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>\n          </div>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"message\">\n            <div class=\"py-3 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-warning\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">John Doe</small>\n              <small class=\"text-muted float-right mt-1\">5 minutes ago</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <div class=\"small text-muted text-truncate\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>\n          </div>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"message\">\n            <div class=\"py-3 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/5.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-danger\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">John Doe</small>\n              <small class=\"text-muted float-right mt-1\">1:52 PM</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <div class=\"small text-muted text-truncate\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>\n          </div>\n        </a>\n        <a href=\"#\" class=\"dropdown-item\">\n          <div class=\"message\">\n            <div class=\"py-3 mr-3 float-left\">\n              <div class=\"avatar\">\n                <img src=\"assets/img/avatars/4.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\">\n                <span class=\"avatar-status badge-info\"></span>\n              </div>\n            </div>\n            <div>\n              <small class=\"text-muted\">John Doe</small>\n              <small class=\"text-muted float-right mt-1\">4:03 PM</small>\n            </div>\n            <div class=\"text-truncate font-weight-bold\">Lorem ipsum dolor sit amet</div>\n            <div class=\"small text-muted text-truncate\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>\n          </div>\n        </a>\n        <a href=\"#\" class=\"dropdown-item text-center\">\n          <strong>View all messages</strong>\n        </a>\n      </div>\n    </li>\n    <li class=\"nav-item d-md-down-none\">\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-location-pin\"></i></a>\n    </li>\n    <li class=\"nav-item dropdown\" dropdown placement=\"bottom right\">\n      <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n        <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\"/>\n        <span class=\"d-md-down-none\">admin</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n        <div class=\"dropdown-header text-center\"><strong>Account</strong></div>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-bell-o\"></i> Updates<span class=\"badge badge-info\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-envelope-o\"></i> Messages<span class=\"badge badge-success\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-tasks\"></i> Tasks<span class=\"badge badge-danger\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-comments\"></i> Comment<span class=\"badge badge-warning\">42</span></a>\n        <div class=\"dropdown-header text-center\"><strong>Settings</strong></div>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-user\"></i> Profile</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-wrench\"></i> Setting</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-usd\"></i> Payments<span class=\"badge badge-dark\">42</span></a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-file\"></i> Projects<span class=\"badge badge-primary\">42</span></a>\n        <div class=\"divider\"></div>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-shield\"></i> Lock account</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-lock\"></i> Logout</a>\n      </div>\n    </li>\n    <button class=\"navbar-toggler d-md-down-none\" type=\"button\" appAsideMenuToggler>&#9776;</button>\n  </ul>\n</header>\n"
+module.exports = "<header class=\"app-header navbar\">\n  <button class=\"navbar-toggler d-lg-none\" type=\"button\" appMobileSidebarToggler>&#9776;</button>\n  <a class=\"navbar-brand\" href=\"#\"></a>\n  <button class=\"navbar-toggler d-md-down-none\" type=\"button\" appSidebarToggler>&#9776;</button>\n\n  <ul class=\"nav navbar-nav ml-auto\">\n    <li class=\"nav-item dropdown\" dropdown placement=\"bottom right\">\n      <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n        <span class=\"d-md-down-none\">admin</span>\n      </a>\n      <div class=\"dropdown-menu dropdown-menu-right\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n        <div class=\"dropdown-header text-center\"><strong>Settings</strong></div>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-user\"></i> Profile</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-wrench\"></i> Setting</a>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-usd\"></i> Payments<span class=\"badge badge-dark\">42</span></a>\n        <div class=\"divider\"></div>\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-lock\"></i> Logout</a>\n      </div>\n    </li>\n    <li>\n\n    </li>\n  </ul>\n</header>\n"
 
 /***/ }),
 
@@ -1117,7 +1118,7 @@ var _a;
 /***/ "../../../../../src/app/components/app-sidebar/app-sidebar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"sidebar\">\n  <app-sidebar-header></app-sidebar-header>\n  <app-sidebar-form></app-sidebar-form>\n  <nav class=\"sidebar-nav\">\n    <ul class=\"nav\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/dashboard']\"><i class=\"icon-speedometer\"></i> Dashboard <span class=\"badge badge-info\">NEW</span></a>\n      </li>\n      <li class=\"divider\"></li>\n      <li class=\"nav-title\">\n        UI Elements\n      </li>\n      <li class=\"nav-item nav-dropdown\" routerLinkActive=\"open\" appNavDropdown>\n        <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-puzzle\"></i> Components</a>\n        <ul class=\"nav-dropdown-items\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/buttons']\"><i class=\"icon-puzzle\"></i> Buttons</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/social-buttons']\"><i class=\"icon-puzzle\"></i> Social Buttons</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/cards']\"><i class=\"icon-puzzle\"></i> Cards</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/forms']\"><i class=\"icon-puzzle\"></i> Forms</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/modals']\"><i class=\"icon-puzzle\"></i> Modals</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/switches']\"><i class=\"icon-puzzle\"></i> Switches</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/tables']\"><i class=\"icon-puzzle\"></i> Tables</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/tabs']\"><i class=\"icon-puzzle\"></i> Tabs</a>\n          </li>\n        </ul>\n      </li>\n      <li class=\"nav-item nav-dropdown\" routerLinkActive=\"open\" appNavDropdown>\n        <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-star\"></i> Icons</a>\n        <ul class=\"nav-dropdown-items\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/icons/font-awesome']\"><i class=\"icon-star\"></i> Font Awesome<span class=\"badge badge-secondary\">4.7</span></a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/icons/simple-line-icons']\"><i class=\"icon-star\"></i> Simple Line Icons</a>\n          </li>\n        </ul>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/widgets']\"><i class=\"icon-calculator\"></i> Widgets <span class=\"badge badge-info\">NEW</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/charts']\"><i class=\"icon-pie-chart\"></i> Charts</a>\n      </li>\n      <li class=\"divider\"></li>\n      <li class=\"nav-title\">\n        Extras\n      </li>\n      <li class=\"nav-item nav-dropdown\" appNavDropdown>\n        <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-star\"></i> Pages</a>\n        <ul class=\"nav-dropdown-items\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/login']\"><i class=\"icon-star\"></i> Login</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/register']\"><i class=\"icon-star\"></i> Register</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/404']\"><i class=\"icon-star\"></i> Error 404</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/pages/500']\"><i class=\"icon-star\"></i> Error 500</a>\n          </li>\n        </ul>\n      </li>\n      <li class=\"nav-item mt-auto\">\n        <a class=\"nav-link nav-link-success\" href=\"http://coreui.io/angular/\"><i class=\"icon-cloud-download\"></i> Download CoreUI</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link nav-link-danger\" href=\"http://coreui.io/pro/angular/\"><i class=\"icon-layers\"></i> Try CoreUI <strong>PRO</strong></a>\n      </li>\n    </ul>\n  </nav>\n  <app-sidebar-footer></app-sidebar-footer>\n  <app-sidebar-minimizer></app-sidebar-minimizer>\n</div>\n"
+module.exports = "<div class=\"sidebar\">\n  <app-sidebar-header></app-sidebar-header>\n  <app-sidebar-form></app-sidebar-form>\n  <nav class=\"sidebar-nav\">\n    <ul class=\"nav\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/dashboard']\"><i class=\"icon-speedometer\"></i> Dashboard <span class=\"badge badge-info\">NEW</span></a>\n      </li>\n     <li class=\"divider\"></li>\n      <li class=\"nav-item nav-dropdown\" routerLinkActive=\"open\" appNavDropdown>\n        <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-puzzle\"></i> Admission</a>\n        <ul class=\"nav-dropdown-items\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/buttons']\"><i class=\"icon-puzzle\"></i> New Admission</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/social-buttons']\"><i class=\"icon-puzzle\"></i> Admitted</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/cards']\"><i class=\"icon-puzzle\"></i> Pending Admissions</a>\n          </li>\n        </ul>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" ><i class=\"icon-calculator\"></i>Attendence entry</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"><i class=\"icon-pie-chart\"></i> Payment entry</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"><i class=\"icon-pie-chart\"></i> Invoicing</a>\n      </li>\n      <li class=\"divider\"></li>\n      <li class=\"nav-item nav-dropdown\" appNavDropdown>\n        <a class=\"nav-link nav-dropdown-toggle\" href=\"#\" appNavDropdownToggle><i class=\"icon-star\"></i> Reports</a>\n        <ul class=\"nav-dropdown-items\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" ><i class=\"icon-star\"></i> Attendence Reports</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" ><i class=\"icon-star\"></i> Payment Reports</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\"><i class=\"icon-star\"></i> Student Reports</a>\n          </li>\n        </ul>\n    </ul>\n  </nav>\n  <app-sidebar-footer></app-sidebar-footer>\n  <app-sidebar-minimizer></app-sidebar-minimizer>\n</div>\n"
 
 /***/ }),
 
@@ -1215,7 +1216,7 @@ var _a;
 /***/ "../../../../../src/app/containers/full-layout/full-layout.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\n<div class=\"app-body\">\n  <app-sidebar></app-sidebar>\n  <!-- Main content -->\n  <main class=\"main\">\n    <!-- Breadcrumb -->\n    <ol class=\"breadcrumb\">\n      <app-breadcrumbs></app-breadcrumbs>\n      <!-- Breadcrumb Menu-->\n      <li class=\"breadcrumb-menu d-md-down-none\">\n        <div class=\"btn-group\" role=\"group\" aria-label=\"Button group with nested dropdown\">\n          <a class=\"btn\" href=\"#\"><i class=\"icon-speech\"></i></a>\n          <a class=\"btn\" [routerLink]=\"['/dashboard']\"><i class=\"icon-graph\"></i> &nbsp;Dashboard</a>\n          <a class=\"btn\" href=\"#\"><i class=\"icon-settings\"></i> &nbsp;Settings</a>\n        </div>\n      </li>\n    </ol>\n    <div class=\"container-fluid\">\n      <router-outlet></router-outlet>\n    </div><!-- /.conainer-fluid -->\n  </main>\n  <app-aside></app-aside>\n</div>\n<app-footer></app-footer>\n"
+module.exports = "<app-header></app-header>\n<div class=\"app-body\">\n  <app-sidebar></app-sidebar>\n  <!-- Main content -->\n  <main class=\"main\">\n    <div class=\"container-fluid\">\n      <router-outlet></router-outlet>\n    </div><!-- /.conainer-fluid -->\n  </main>\n</div>\n<app-footer></app-footer>\n"
 
 /***/ }),
 
@@ -1297,6 +1298,13 @@ FullLayout = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/containers/simple-layout/simple-layout.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<header class=\"app-header navbar\">\r\n  <button class=\"navbar-toggler d-lg-none\" type=\"button\" appMobileSidebarToggler>&#9776;</button>\r\n  <a class=\"navbar-brand\" href=\"#\"></a>\r\n  <button class=\"navbar-toggler d-md-down-none\" type=\"button\" appSidebarToggler>&#9776;</button>\r\n</header>\r\n<router-outlet></router-outlet>\r\n"
+
+/***/ }),
+
 /***/ "../../../../../src/app/containers/simple-layout/simple-layout.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1322,7 +1330,7 @@ var SimpleLayout = (function () {
 SimpleLayout = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-dashboard',
-        template: '<router-outlet></router-outlet>',
+        template: __webpack_require__("../../../../../src/app/containers/simple-layout/simple-layout.component.html"),
     }),
     __metadata("design:paramtypes", [])
 ], SimpleLayout);

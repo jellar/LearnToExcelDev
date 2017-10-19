@@ -1,13 +1,13 @@
 webpackJsonp(["chartjs.module"],{
 
-/***/ "../../../../../src/app/views/chartjs/chartjs-routing.module.ts":
+/***/ "../../../../../src/app/chartjs/chartjs-routing.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChartJSRoutingModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chartjs_component__ = __webpack_require__("../../../../../src/app/views/chartjs/chartjs.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chartjs_component__ = __webpack_require__("../../../../../src/app/chartjs/chartjs.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,14 +42,14 @@ ChartJSRoutingModule = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/views/chartjs/chartjs.component.html":
+/***/ "../../../../../src/app/chartjs/chartjs.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"animated fadeIn\">\n  <div class=\"card-columns cols-2\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Line Chart\n        <div class=\"card-actions\">\n          <a href=\"http://www.chartjs.org\">\n            <small class=\"text-muted\">docs</small>\n          </a>\n        </div>\n      </div>\n      <div class=\"card-body\">\n        <div class=\"chart-wrapper\">\n          <canvas baseChart class=\"chart\"\n          [datasets]=\"lineChartData\"\n          [labels]=\"lineChartLabels\"\n          [options]=\"lineChartOptions\"\n          [colors]=\"lineChartColours\"\n          [legend]=\"lineChartLegend\"\n          [chartType]=\"lineChartType\"\n          (chartHover)=\"chartHovered($event)\"\n          (chartClick)=\"chartClicked($event)\"></canvas>\n        </div>\n      </div>\n    </div>\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Bar Chart\n        <div class=\"card-actions\">\n          <a href=\"http://www.chartjs.org\">\n            <small class=\"text-muted\">docs</small>\n          </a>\n        </div>\n      </div>\n      <div class=\"card-body\">\n        <div class=\"chart-wrapper\">\n          <canvas baseChart class=\"chart\"\n          [datasets]=\"barChartData\"\n          [labels]=\"barChartLabels\"\n          [options]=\"barChartOptions\"\n          [legend]=\"barChartLegend\"\n          [chartType]=\"barChartType\"\n          (chartHover)=\"chartHovered($event)\"\n          (chartClick)=\"chartClicked($event)\"></canvas>\n        </div>\n      </div>\n    </div>\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Doughnut Chart\n        <div class=\"card-actions\">\n          <a href=\"http://www.chartjs.org\">\n            <small class=\"text-muted\">docs</small>\n          </a>\n        </div>\n      </div>\n      <div class=\"card-body\">\n        <div class=\"chart-wrapper\">\n          <canvas baseChart class=\"chart\"\n          [data]=\"doughnutChartData\"\n          [labels]=\"doughnutChartLabels\"\n          [chartType]=\"doughnutChartType\"\n          (chartHover)=\"chartHovered($event)\"\n          (chartClick)=\"chartClicked($event)\"></canvas>\n        </div>\n      </div>\n    </div>\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Radar Chart\n        <div class=\"card-actions\">\n          <a href=\"http://www.chartjs.org\">\n            <small class=\"text-muted\">docs</small>\n          </a>\n        </div>\n      </div>\n      <div class=\"card-body\">\n        <div class=\"chart-wrapper\">\n          <canvas baseChart class=\"chart\"\n          [datasets]=\"radarChartData\"\n          [labels]=\"radarChartLabels\"\n          [chartType]=\"radarChartType\"\n          (chartHover)=\"chartHovered($event)\"\n          (chartClick)=\"chartClicked($event)\"></canvas>\n        </div>\n      </div>\n    </div>\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Pie Chart\n        <div class=\"card-actions\">\n          <a href=\"http://www.chartjs.org\">\n            <small class=\"text-muted\">docs</small>\n          </a>\n        </div>\n      </div>\n      <div class=\"card-body\">\n        <div class=\"chart-wrapper\">\n          <canvas baseChart class=\"chart\"\n          [data]=\"pieChartData\"\n          [labels]=\"pieChartLabels\"\n          [chartType]=\"pieChartType\"\n          (chartHover)=\"chartHovered($event)\"\n          (chartClick)=\"chartClicked($event)\"></canvas>\n        </div>\n      </div>\n    </div>\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Polar Area Chart\n        <div class=\"card-actions\">\n          <a href=\"http://www.chartjs.org\">\n            <small class=\"text-muted\">docs</small>\n          </a>\n        </div>\n      </div>\n      <div class=\"card-body\">\n        <div class=\"chart-wrapper\">\n          <canvas baseChart class=\"chart\"\n          [data]=\"polarAreaChartData\"\n          [labels]=\"polarAreaChartLabels\"\n          [legend]=\"polarAreaLegend\"\n          [chartType]=\"polarAreaChartType\"\n          (chartHover)=\"chartHovered($event)\"\n          (chartClick)=\"chartClicked($event)\"></canvas>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/views/chartjs/chartjs.component.ts":
+/***/ "../../../../../src/app/chartjs/chartjs.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -147,7 +147,7 @@ var ChartJSComponent = (function () {
 }());
 ChartJSComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        template: __webpack_require__("../../../../../src/app/views/chartjs/chartjs.component.html")
+        template: __webpack_require__("../../../../../src/app/chartjs/chartjs.component.html")
     })
 ], ChartJSComponent);
 
@@ -155,7 +155,7 @@ ChartJSComponent = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/views/chartjs/chartjs.module.ts":
+/***/ "../../../../../src/app/chartjs/chartjs.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -164,8 +164,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_charts_ng2_charts__ = __webpack_require__("../../../../ng2-charts/ng2-charts.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_charts_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_charts_ng2_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chartjs_component__ = __webpack_require__("../../../../../src/app/views/chartjs/chartjs.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chartjs_routing_module__ = __webpack_require__("../../../../../src/app/views/chartjs/chartjs-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chartjs_component__ = __webpack_require__("../../../../../src/app/chartjs/chartjs.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chartjs_routing_module__ = __webpack_require__("../../../../../src/app/chartjs/chartjs-routing.module.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

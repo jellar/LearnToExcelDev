@@ -20,7 +20,7 @@ using Microsoft.IdentityModel.Tokens;
 namespace LearnToExcelDev.Controllers
 {
     [Authorize]
-    [Route("[controller]/[action]")]
+    [Route("api/[controller]/[action]")]
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -35,7 +35,12 @@ namespace LearnToExcelDev.Controllers
             _signInManager = signInManager;
             _configuration = configuration;
         }
-
+        [AllowAnonymous]
+        [HttpGet]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
+        }
         [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> GenerateToken(LoginViewModel model)
@@ -53,12 +58,13 @@ namespace LearnToExcelDev.Controllers
                             new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                         };
-
                         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Tokens:Key"]));
+
                         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                         var token = new JwtSecurityToken(_configuration["Tokens:Issuer"], _configuration["Tokens:Issuer"],
                             claims, expires: DateTime.Now.AddHours(8), signingCredentials: creds);
+
 
                         return Ok(new
                         {
